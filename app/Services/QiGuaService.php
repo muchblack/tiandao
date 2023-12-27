@@ -1,34 +1,73 @@
 <?php
-namespace app\Services;
+namespace App\Services;
 
+use Illuminate\Support\Facades\File;
 class QiGuaService{
 
+    private  $_guaName = [
+        '+++' => 0, //天
+        '++-' => 1, //澤
+        '+-+' => 2, //火
+        '+--' => 3, //雷
+        '-++' => 4, //風
+        '-+-' => 5, //水
+        '--+' => 6, //山
+        '---' => 7, //地
+    ];
     public function qiGua()
     {
-        $baGua = [];
-        for($i=0; $i<6; $i++)
-        {
+        $oriBaGua = [];
+        $chBaGua = [];
+        $yiJing = File::json(base_path('yiJing/yiJing.json'));
+
+        for ($i = 0; $i < 6; $i++) {
             $temp = $this->_getOne();
-            switch($temp)
-            {
+            switch ($temp) {
                 case 13:
-                    $baGua[] = '+*';
+                    $oriBaGua[] = '+';
+                    $chBaGua[] = '-';
                     break;
                 case 17:
-                    $baGua[] = '-';
+                    $oriBaGua[] = '-';
+                    $chBaGua[] = '-';
                     break;
                 case 21:
-                    $baGua[] = '+';
+                    $oriBaGua[] = '+';
+                    $chBaGua[] = '+';
                     break;
                 case 25:
-                    $baGua[] = '-*';
+                    $oriBaGua[] = '-';
+                    $chBaGua[] = '+';
                     break;
             }
         }
-        dump($baGua);
 
-        return $baGua;
+        //本卦上下卦
+        $oriUpGua = $oriBaGua[3] . $oriBaGua[4] . $oriBaGua[5];
+        $oriDownGua = $oriBaGua[0] . $oriBaGua[1] . $oriBaGua[2];
+        //變卦上下卦
+        $chUpGua = $chBaGua[3] . $chBaGua[4] . $chBaGua[5];
+        $chDownGua = $chBaGua[0] . $chBaGua[1] . $chBaGua[2];
+
+        //得出索引
+        $oriUp = $this->_guaName[$oriUpGua];
+        $oriDown = $this->_guaName[$oriDownGua];
+        $chUp = $this->_guaName[$chUpGua];
+        $chDown = $this->_guaName[$chDownGua];
+
+        if (($oriUp == $chUp) && ($oriDown == $chDown))
+        {
+            return ['oriGua' => $yiJing[$oriUp][$oriDown]];
+        }
+        else
+        {
+            return [
+                'oriGua' => $yiJing[$oriUp][$oriDown],
+                'chGua' => $yiJing[$chUp][$chDown]
+            ];
+        }
     }
+
 
     private function _getOne()
     {
