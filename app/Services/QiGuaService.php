@@ -18,6 +18,7 @@ class QiGuaService{
     {
         $oriBaGua = [];
         $chBaGua = [];
+        $show = [];
         $yiJing = File::json(base_path('yiJing/yiJing.json'));
 
         for ($i = 0; $i < 6; $i++) {
@@ -26,18 +27,22 @@ class QiGuaService{
                 case 13:
                     $oriBaGua[] = '+';
                     $chBaGua[] = '-';
+                    $show[] = '+*';
                     break;
                 case 17:
                     $oriBaGua[] = '-';
                     $chBaGua[] = '-';
+                    $show[] = '-';
                     break;
                 case 21:
                     $oriBaGua[] = '+';
                     $chBaGua[] = '+';
+                    $show[] = '+';
                     break;
                 case 25:
                     $oriBaGua[] = '-';
                     $chBaGua[] = '+';
+                    $show[] = '-*';
                     break;
             }
         }
