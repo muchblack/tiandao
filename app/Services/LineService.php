@@ -11,10 +11,12 @@ use LINE\Webhook\Model\MessageEvent;
 use LINE\Webhook\Model\TextMessageContent;
 use LINE\Clients\MessagingApi\Configuration;
 use App\Services\QiGuaService;
+use App\Services\ShengSheQianService;
 class LineService
 {
     private $_bot;
     private $_qigua;
+    private $_shengSheQian;
 
     public function __construct()
     {
@@ -23,6 +25,7 @@ class LineService
         $config->setAccessToken($channelToken);
         $this->_bot = new MessagingApiApi(new \GuzzleHttp\Client(), $config);
         $this->_qigua = new QiGuaService();
+        $this->_shengSheQian = new ShengSheQianService();
     }
 
     public function webhook($request)
@@ -43,6 +46,31 @@ class LineService
             }
 
             $replyText = $message->getText();
+
+            switch($replyText)
+            {
+                case '起卦':
+                    $guaMessages = $this->_guaFormat();
+                    $this->_bot->replyMessage( new ReplyMessageRequest([
+                        'replyToken' => $event->getReplyToken(),
+                        'messages' => $guaMessages
+                    ]));
+                    break;
+                case '抽神社籤':
+                    $qianShi = $this->_shengSheQian->getQian();
+                    $this->_bot->replyMessage( new ReplyMessageRequest([
+                        'replyToken' => $event->getReplyToken(),
+                        'messages' => $qianShi
+                    ]));
+                    break;
+                default:
+                    $this->_bot->replyMessage( new ReplyMessageRequest([
+                        'replyToken' => $event->getReplyToken(),
+                        'messages' => [
+                            (new TextMessage(['text' => '我不清楚你的問題，可用指令有： 起卦 和 抽神社籤。']))->setType('text')
+                        ]
+                    ]));
+            }
 
             if($replyText == '起卦')
             {
