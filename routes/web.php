@@ -16,3 +16,4 @@ use App\Http\Controllers\SheShiController;
 */
 
 Route::get('/', [SheShiController::class, 'index']);
+Route::get('/shenshe', [SheShiController::class, 'shengShe']);

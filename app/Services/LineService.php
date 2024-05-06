@@ -47,31 +47,6 @@ class LineService
 
             $replyText = $message->getText();
 
-            switch($replyText)
-            {
-                case '起卦':
-                    $guaMessages = $this->_guaFormat();
-                    $this->_bot->replyMessage( new ReplyMessageRequest([
-                        'replyToken' => $event->getReplyToken(),
-                        'messages' => $guaMessages
-                    ]));
-                    break;
-                case '抽神社籤':
-                    $qianShi = $this->_shengSheQian->getQian();
-                    $this->_bot->replyMessage( new ReplyMessageRequest([
-                        'replyToken' => $event->getReplyToken(),
-                        'messages' => $qianShi
-                    ]));
-                    break;
-                default:
-                    $this->_bot->replyMessage( new ReplyMessageRequest([
-                        'replyToken' => $event->getReplyToken(),
-                        'messages' => [
-                            (new TextMessage(['text' => '我不清楚你的問題，可用指令有： 起卦 和 抽神社籤。']))->setType('text')
-                        ]
-                    ]));
-            }
-
             if($replyText == '起卦')
             {
                 $guaMessages = $this->_guaFormat();
@@ -80,12 +55,22 @@ class LineService
                     'messages' => $guaMessages
                 ]));
             }
+            else if($replyText == '抽神社籤')
+            {
+                $qianShi = $this->_shengSheQian->getQian();
+                $this->_bot->replyMessage( new ReplyMessageRequest([
+                    'replyToken' => $event->getReplyToken(),
+                    'messages' => [
+                       (new TextMessage(['text' => $qianShi]))->setType('text')
+                   ]
+                ]));
+            }
             else
             {
                 $this->_bot->replyMessage( new ReplyMessageRequest([
                    'replyToken' => $event->getReplyToken(),
                    'messages' => [
-                       (new TextMessage(['text' => '我不清楚你的問題']))->setType('text')
+                       (new TextMessage(['text' => '我不清楚你的問題，可用指令有： 起卦 和 抽神社籤。']))->setType('text')
                    ]
                 ]));
             }

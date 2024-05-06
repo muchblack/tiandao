@@ -14,7 +14,7 @@ class ShengSheQianService
 
         $txt = '第 '.$rightQian['index'].' 籤  '. $rightQian['lucky']."\n";
         $txt.= "[籤詩]\n".$rightQian['content']."\n";
-        $txt.= "[解釋]\n".$rightQian['explan']."\n";
+        $txt.= "[解釋]\n".$rightQian['explain']."\n";
         $txt.= "[所求]\n".$rightQian['result']."\n";
 
         return $txt;
