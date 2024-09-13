@@ -17,6 +17,7 @@ class LineService
     private $_bot;
     private $_qigua;
     private $_shengSheQian;
+    private LotteryService $_Lottery;
 
     public function __construct()
     {
@@ -26,6 +27,7 @@ class LineService
         $this->_bot = new MessagingApiApi(new \GuzzleHttp\Client(), $config);
         $this->_qigua = new QiGuaService();
         $this->_shengSheQian = new ShengSheQianService();
+        $this->_Lottery = new LotteryService();
     }
 
     public function webhook($request)
@@ -63,6 +65,16 @@ class LineService
                     'messages' => [
                        (new TextMessage(['text' => $qianShi]))->setType('text')
                    ]
+                ]));
+            }
+            else if($replyText === '大樂透號碼')
+            {
+                $lotteryTxt = $this->_Lottery->bigLotteryCount();
+                $this->_bot->replyMessage( new ReplyMessageRequest([
+                    'replyToken' => $event->getReplyToken(),
+                    'messages' => [
+                        (new TextMessage(['text' => $lotteryTxt]))->setType('text')
+                    ]
                 ]));
             }
             else
