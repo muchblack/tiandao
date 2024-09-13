@@ -47,7 +47,8 @@ class LotteryService
         //全部
         $lotteryAll = $this->_count($this->lottery->all());
 
-        $text =  "前十期出現最多的六個號碼：[".implode(',', $this->_refer($lottery10, 'most'))."]\n";
+        $text =  "結果僅供參考，勿過度投注\n";
+        $text .= "前十期出現最多的六個號碼：[".implode(',', $this->_refer($lottery10, 'most'))."]\n";
         $text .= "前十期沒出現的號碼：[".implode(',', $this->_refer($lottery10, 'less'))."]\n";
         $text .= "\n";
         $text .= "過去一年出現最多的六個號碼：[".implode(',', $this->_refer($lottery1Y, 'most'))."]\n";
@@ -61,6 +62,7 @@ class LotteryService
         $text .= "\n";
         $text .= "歷史出現最多的六個號碼：[".implode(',', $this->_refer($lotteryAll, 'most'))."]\n";
         $text .= "歷史出現最少的六個號碼：[".implode(',', $this->_refer($lotteryAll, 'less'))."]\n";
+        $text .= "結果僅供參考，勿過度投注\n";
 
         return $text;
     }
