@@ -1,6 +1,6 @@
 <?php
 
-namespace App\InterFaces;
+namespace App\KeyWords;
 
 interface Command
 {

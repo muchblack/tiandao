@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Services\QiGua;
-use App\Services\ShengSheQian;
+use App\KeyWords\QiGua;
+use App\KeyWords\ShengSheQian;
 
 class SheShiController extends Controller
 {

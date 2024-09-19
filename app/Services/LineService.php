@@ -1,16 +1,16 @@
 <?php
 namespace App\Services;
 
+use App\KeyWords\Error;
+use App\KeyWords\Lottery;
+use App\KeyWords\QiGua;
+use App\KeyWords\ShengSheQian;
 use LINE\Clients\MessagingApi\Api\MessagingApiApi;
+use LINE\Clients\MessagingApi\Configuration;
 use LINE\Constants\HTTPHeader;
 use LINE\Parser\EventRequestParser;
 use LINE\Webhook\Model\MessageEvent;
 use LINE\Webhook\Model\TextMessageContent;
-use LINE\Clients\MessagingApi\Configuration;
-use App\Services\QiGua;
-use App\Services\ShengSheQian;
-use App\Services\Lottery;
-use App\Services\CommandService;
 
 class LineService
 {

@@ -1,7 +1,6 @@
 <?php
-namespace App\Services;
+namespace App\KeyWords;
 
-use App\InterFaces\Command;
 use Illuminate\Support\Facades\File;
 use LINE\Clients\MessagingApi\Model\TextMessage;
 

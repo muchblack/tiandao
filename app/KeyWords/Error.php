@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Services;
+namespace App\KeyWords;
 
-use App\InterFaces\Command;
 use LINE\Clients\MessagingApi\Model\TextMessage;
 
 class Error implements Command

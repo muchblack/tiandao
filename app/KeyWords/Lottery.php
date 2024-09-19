@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Services;
+namespace App\KeyWords;
 
-use App\InterFaces\Command;
 use App\Models\BigLottery;
 use LINE\Clients\MessagingApi\Model\TextMessage;
 
