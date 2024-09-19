@@ -1,8 +1,12 @@
 <?php
 namespace App\Services;
 
+use App\InterFaces\Command;
 use Illuminate\Support\Facades\File;
-class QiGuaService{
+use LINE\Clients\MessagingApi\Model\TextMessage;
+
+class QiGua implements Command
+{
 
     private  $_guaName = [
         '+++' => 0, //天
@@ -14,11 +18,35 @@ class QiGuaService{
         '--+' => 6, //山
         '---' => 7, //地
     ];
-    public function qiGua()
+
+    public function replyCommand(): array
+    {
+        $gua = $this->_qiGua();
+
+        $oriGua = "[本卦]  ".$gua['oriGua']['combine']."\n";
+        $oriGua .= "[古解]\n".$gua['oriGua']['short']."\n";
+        $oriGua .= "[運勢]\n".$gua['oriGua']['yun']."\n";
+        $oriGua .= "[現解]\n".$gua['oriGua']['desc']."\n";
+
+        $messages[] = (new TextMessage(['text'=> $oriGua]))->setType('text');
+
+        if(isset($gua['chGua']))
+        {
+            $chGua = "[變卦]  ".$gua['chGua']['combine']."\n";
+            $chGua .= "[古解]\n".$gua['chGua']['short']."\n";
+            $chGua .= "[運勢]\n".$gua['chGua']['yun']."\n";
+            $chGua .= "[現解]\n".$gua['chGua']['desc']."\n";
+
+            $messages[] = (new TextMessage(['text'=>$chGua]))->setType('text');
+        }
+
+        return $messages;
+    }
+
+    private function _qiGua(): array
     {
         $oriBaGua = [];
         $chBaGua = [];
-        $show = [];
         $yiJing = File::json(base_path('yiJing/yiJing.json'));
 
         for ($i = 0; $i < 6; $i++) {
@@ -74,7 +102,7 @@ class QiGuaService{
     }
 
 
-    private function _getOne()
+    private function _getOne(): float|int
     {
         $daYan = 49;
         $all = [] ;

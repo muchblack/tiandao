@@ -3,21 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Services\QiGuaService;
-use App\Services\ShengSheQianService;
+use App\Services\QiGua;
+use App\Services\ShengSheQian;
 
 class SheShiController extends Controller
 {
     //
     public function index()
     {
-        $qiGua = new QiGuaService();
-        dump($qiGua->qiGua());
+        $qiGua = new QiGua();
+        dump($qiGua->replyCommand());
     }
 
     public function shengShe()
     {
-        $qiGua = new ShengSheQianService();
-        dump($qiGua->getQian());
+        $qiGua = new ShengSheQian();
+        dump($qiGua->replyCommand());
     }
 }

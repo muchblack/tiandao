@@ -2,14 +2,17 @@
 
 namespace App\Services;
 
+use App\InterFaces\Command;
 use App\Models\BigLottery;
+use LINE\Clients\MessagingApi\Model\TextMessage;
+
 /*
  * 做大樂透統計，先以前十期最常開&最不常開 開始
  */
-class LotteryService
+class Lottery implements Command
 {
     protected BigLottery $lottery;
-    private $oriArray = [] ;
+    private array $oriArray = [] ;
     public function __construct()
     {
         $this->lottery = new BigLottery();
@@ -30,7 +33,7 @@ class LotteryService
     /*
      * 大樂透統計
      */
-    public function bigLotteryCount()
+    public function replyCommand(): array
     {
         //時間換算
         $thisMingGouNian = date('Y') - 1911; //今年
@@ -64,7 +67,7 @@ class LotteryService
         $text .= "歷史出現最少的六個號碼：[".implode(',', $this->_refer($lotteryAll, 'less'))."]\n";
         $text .= "結果僅供參考，勿過度投注\n";
 
-        return $text;
+        return [(new TextMessage(['text'=>$text]))->setType('text')];
     }
 
     private function _count($data): array

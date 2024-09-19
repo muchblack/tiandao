@@ -1,11 +1,13 @@
 <?php
 namespace App\Services;
 
+use App\InterFaces\Command;
 use Illuminate\Support\Facades\File;
+use LINE\Clients\MessagingApi\Model\TextMessage;
 
-class ShengSheQianService
+class ShengSheQian implements Command
 {
-    public function getQian()
+    public function replyCommand(): array
     {
         $qianShi = File::json(base_path('yiJing/Divination.json'));
 
@@ -17,6 +19,7 @@ class ShengSheQianService
         $txt.= "[解釋]\n".$rightQian['explain']."\n";
         $txt.= "[所求]\n".$rightQian['result']."\n";
 
-        return $txt;
+        return [(new TextMessage(['text'=>$txt]))->setType('text')];
+
     }
 }
