@@ -2,25 +2,25 @@
 
 namespace App\Console\Commands;
 
-use App\Models\BigLottery;
+use App\KeyWords\MonteCarlo;
 use Illuminate\Console\Command;
-use App\KeyWords\Lottery;
+use Monolog\Logger;
 
-class LotteryTest extends Command
+class MonteCarloTest extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'lottery';
+    protected $signature = 'montecarlo';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = '測試lottery';
+    protected $description = 'Command description';
 
     /**
      * Execute the console command.
@@ -28,7 +28,7 @@ class LotteryTest extends Command
     public function handle()
     {
         //
-        $lotteryService = new Lottery();
-        $lotteryService->replyCommand();
+        $monteCarlo = new MonteCarlo();
+        $monteCarlo->replyCommand();
     }
 }

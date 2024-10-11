@@ -3,6 +3,7 @@ namespace App\Services;
 
 use App\KeyWords\Error;
 use App\KeyWords\Lottery;
+use App\KeyWords\MonteCarlo;
 use App\KeyWords\QiGua;
 use App\KeyWords\ShengSheQian;
 use LINE\Clients\MessagingApi\Api\MessagingApiApi;
@@ -45,6 +46,7 @@ class LineService
                 '起卦' => new CommandService($event, $this->_bot, new QiGua()),
                 '抽神社籤' => new CommandService($event, $this->_bot, new ShengSheQian()),
                 '大樂透號碼' => new CommandService($event, $this->_bot, new Lottery()),
+                '蒙地卡羅預測' => new CommandService($event, $this->_bot, new MonteCarlo()),
                 default => new CommandService($event, $this->_bot, new Error()),
             };
 
