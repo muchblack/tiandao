@@ -35,6 +35,13 @@ class QiGua implements Command
             $chGua .= "[古解]\n".$gua['chGua']['short']."\n";
             $chGua .= "[運勢]\n".$gua['chGua']['yun']."\n";
             $chGua .= "[現解]\n".$gua['chGua']['desc']."\n";
+            $chGua .= "[爻變]\n".$gua['show'][5]."\n";
+            $chGua .= $gua['show'][4]."\n";
+            $chGua .= $gua['show'][3]."\n";
+            $chGua .= $gua['show'][2]."\n";
+            $chGua .= $gua['show'][1]."\n";
+            $chGua .= $gua['show'][0]."\n";
+
 
             $messages[] = (new TextMessage(['text'=>$chGua]))->setType('text');
         }
@@ -47,7 +54,7 @@ class QiGua implements Command
         $oriBaGua = [];
         $chBaGua = [];
         $yiJing = File::json(base_path('yiJing/yiJing.json'));
-
+        $show = [];
         for ($i = 0; $i < 6; $i++) {
             $temp = $this->_getOne();
             switch ($temp) {
@@ -95,7 +102,8 @@ class QiGua implements Command
         {
             return [
                 'oriGua' => $yiJing[$oriUp][$oriDown],
-                'chGua' => $yiJing[$chUp][$chDown]
+                'chGua' => $yiJing[$chUp][$chDown],
+                'show' => $show,
             ];
         }
     }
