@@ -2,29 +2,25 @@
 
 namespace App\Services;
 
+use App\KeyWords\Command;
+use LINE\Clients\MessagingApi\Api\MessagingApiApi;
 use LINE\Clients\MessagingApi\Model\ReplyMessageRequest;
+use LINE\Webhook\Model\MessageEvent;
 
 class CommandService
 {
-
-
-    private mixed $service;
-    private mixed $bot;
-    private mixed $event;
-
-    public function __construct($event, $bot, $service)
+    public function executeCommand(MessageEvent $event, MessagingApiApi $bot, Command $command): void
     {
-        $this->service = $service;
-        $this->bot = $bot;
-        $this->event = $event;
+        $replyMessages = $command->handle($event);
+        
+        $this->sendReply($event, $bot, $replyMessages);
     }
 
-    public function reply(): void
+    private function sendReply(MessageEvent $event, MessagingApiApi $bot, array $messages): void
     {
-        $replyText = $this->service->replyCommand();
-        $this->bot->replyMessage( new ReplyMessageRequest([
-            'replyToken' => $this->event->getReplyToken(),
-            'messages' => $replyText
+        $bot->replyMessage(new ReplyMessageRequest([
+            'replyToken' => $event->getReplyToken(),
+            'messages' => $messages
         ]));
     }
 }

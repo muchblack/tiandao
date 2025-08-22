@@ -1,13 +1,15 @@
 <?php
+
 namespace App\KeyWords;
 
 use Illuminate\Support\Facades\File;
 use LINE\Clients\MessagingApi\Model\TextMessage;
+use LINE\Webhook\Model\MessageEvent;
 
 class QiGua implements Command
 {
 
-    private  $_guaName = [
+    private $_guaName = [
         '+++' => 0, //乾 天
         '++-' => 1, //兌 澤
         '+-+' => 2, //離 火
@@ -18,32 +20,46 @@ class QiGua implements Command
         '---' => 7, //坤 地
     ];
 
+    public function canHandle(string $message): bool
+    {
+        return in_array($message, ['起卦', '占卜', '問卦']);
+    }
+
+    public function handle(MessageEvent $event): array
+    {
+        return $this->replyCommand();
+    }
+
+    public function getDescription(): string
+    {
+        return '易經起卦功能 - 透過模擬傳統蓍草占卜法進行六爻起卦';
+    }
+
     public function replyCommand(): array
     {
         $gua = $this->_qiGua();
 
-        $oriGua = "[本卦]  ".$gua['oriGua']['combine']."\n";
-        $oriGua .= "[古解]\n".$gua['oriGua']['short']."\n";
-        $oriGua .= "[運勢]\n".$gua['oriGua']['yun']."\n";
-        $oriGua .= "[現解]\n".$gua['oriGua']['desc']."\n";
+        $oriGua = "[本卦]  " . $gua['oriGua']['combine'] . "\n";
+        $oriGua .= "[古解]\n" . $gua['oriGua']['short'] . "\n";
+        $oriGua .= "[運勢]\n" . $gua['oriGua']['yun'] . "\n";
+        $oriGua .= "[現解]\n" . $gua['oriGua']['desc'] . "\n";
 
-        $messages[] = (new TextMessage(['text'=> $oriGua]))->setType('text');
+        $messages[] = (new TextMessage(['text' => $oriGua]))->setType('text');
 
-        if(isset($gua['chGua']))
-        {
-            $chGua = "[變卦]  ".$gua['chGua']['combine']."\n";
-            $chGua .= "[古解]\n".$gua['chGua']['short']."\n";
-            $chGua .= "[運勢]\n".$gua['chGua']['yun']."\n";
-            $chGua .= "[現解]\n".$gua['chGua']['desc']."\n";
-            $chGua .= "[爻變]\n".$gua['show'][5]."\n";
-            $chGua .= $gua['show'][4]."\n";
-            $chGua .= $gua['show'][3]."\n";
-            $chGua .= $gua['show'][2]."\n";
-            $chGua .= $gua['show'][1]."\n";
-            $chGua .= $gua['show'][0]."\n";
+        if (isset($gua['chGua'])) {
+            $chGua = "[變卦]  " . $gua['chGua']['combine'] . "\n";
+            $chGua .= "[古解]\n" . $gua['chGua']['short'] . "\n";
+            $chGua .= "[運勢]\n" . $gua['chGua']['yun'] . "\n";
+            $chGua .= "[現解]\n" . $gua['chGua']['desc'] . "\n";
+            $chGua .= "[爻變]\n" . $gua['show'][5] . "\n";
+            $chGua .= $gua['show'][4] . "\n";
+            $chGua .= $gua['show'][3] . "\n";
+            $chGua .= $gua['show'][2] . "\n";
+            $chGua .= $gua['show'][1] . "\n";
+            $chGua .= $gua['show'][0] . "\n";
 
 
-            $messages[] = (new TextMessage(['text'=>$chGua]))->setType('text');
+            $messages[] = (new TextMessage(['text' => $chGua]))->setType('text');
         }
 
         return $messages;
@@ -94,12 +110,9 @@ class QiGua implements Command
         $chUp = $this->_guaName[$chUpGua];
         $chDown = $this->_guaName[$chDownGua];
 
-        if (($oriUp == $chUp) && ($oriDown == $chDown))
-        {
+        if (($oriUp == $chUp) && ($oriDown == $chDown)) {
             return ['oriGua' => $yiJing[$oriUp][$oriDown]];
-        }
-        else
-        {
+        } else {
             return [
                 'oriGua' => $yiJing[$oriUp][$oriDown],
                 'chGua' => $yiJing[$chUp][$chDown],
@@ -112,38 +125,31 @@ class QiGua implements Command
     private function _getOne(): float|int
     {
         $daYan = 49;
-        $all = [] ;
-        for ($i = 0; $i < 3; $i++)
-        {
-            $storage = [] ;
+        $all = [];
+        for ($i = 0; $i < 3; $i++) {
+            $storage = [];
             //step1 先分堆
-            $seed = mt_rand(5,8);
-            $right = mt_rand((24-$seed), (25+$seed));
-            $left = $daYan-$right;
+            $seed = mt_rand(5, 8);
+            $right = mt_rand((24 - $seed), (25 + $seed));
+            $left = $daYan - $right;
 
             //step2 取數
             //step2.1 右邊取一隻
-            $right = $right-1 ;
-            $storage[] = 1 ;
+            $right = $right - 1;
+            $storage[] = 1;
 
             //step2.2 左邊取餘數
-            if(($left % 4) == 0 )
-            {
+            if (($left % 4) == 0) {
                 //整除算4
                 $storage[] = 4;
-            }
-            else
-            {
+            } else {
                 $storage[] = ($left % 4);
             }
 
             //step2.3 右邊取餘數
-            if($right % 4 == 0 )
-            {
+            if ($right % 4 == 0) {
                 $storage[] = 4;
-            }
-            else
-            {
+            } else {
                 $storage[] = ($right % 4);
             }
             $all[] = array_sum($storage);

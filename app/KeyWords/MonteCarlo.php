@@ -4,14 +4,33 @@ namespace App\KeyWords;
 
 use App\Models\BigLottery;
 use LINE\Clients\MessagingApi\Model\TextMessage;
+use LINE\Webhook\Model\MessageEvent;
 
 class MonteCarlo implements Command
 {
+    private BigLottery $lottery;
+
     public function __construct()
     {
         $this->lottery = new BigLottery();
     }
-    public function replyCommand()
+
+    public function canHandle(string $message): bool
+    {
+        return in_array($message, ['蒙地卡羅預測', '蒙地卡羅', '彩票預測']);
+    }
+
+    public function handle(MessageEvent $event): array
+    {
+        return $this->replyCommand();
+    }
+
+    public function getDescription(): string
+    {
+        return '蒙地卡羅模擬預測 - 利用統計模擬方法進行大樂透號碼預測';
+    }
+
+    public function replyCommand(): array
     {
         // TODO: Implement replyCommand() method.
 

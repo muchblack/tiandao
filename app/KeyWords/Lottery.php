@@ -4,6 +4,7 @@ namespace App\KeyWords;
 
 use App\Models\BigLottery;
 use LINE\Clients\MessagingApi\Model\TextMessage;
+use LINE\Webhook\Model\MessageEvent;
 
 /*
  * 做大樂透統計，先以前十期最常開&最不常開 開始
@@ -27,6 +28,21 @@ class Lottery implements Command
                 $this->oriArray['num'.$now] = 0;
             }
         }
+    }
+
+    public function canHandle(string $message): bool
+    {
+        return in_array($message, ['大樂透號碼', '大樂透', '彩票分析']);
+    }
+
+    public function handle(MessageEvent $event): array
+    {
+        return $this->replyCommand();
+    }
+
+    public function getDescription(): string
+    {
+        return '大樂透號碼統計分析 - 提供歷史開獎號碼統計與趨勢分析';
     }
 
     /*
