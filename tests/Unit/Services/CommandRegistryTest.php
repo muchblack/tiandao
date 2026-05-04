@@ -7,6 +7,7 @@ use App\KeyWords\Lottery;
 use App\KeyWords\MonteCarlo;
 use App\KeyWords\QiGua;
 use App\KeyWords\ShengSheQian;
+use App\KeyWords\Tarot;
 use App\KeyWords\XiaoLiuRen;
 use App\Services\CommandRegistry;
 use Tests\TestCase;
@@ -40,6 +41,8 @@ class CommandRegistryTest extends TestCase
             '小六壬 → XiaoLiuRen' => ['小六壬', XiaoLiuRen::class],
             '起小六壬 → XiaoLiuRen' => ['起小六壬', XiaoLiuRen::class],
             '六壬 → XiaoLiuRen' => ['六壬', XiaoLiuRen::class],
+            '每日塔羅 → Tarot' => ['每日塔羅', Tarot::class],
+            '塔羅三牌陣 → Tarot' => ['塔羅三牌陣', Tarot::class],
         ];
     }
 
@@ -74,11 +77,11 @@ class CommandRegistryTest extends TestCase
         $this->assertInstanceOf(Error::class, $command);
     }
 
-    public function test_default_registration_contains_five_commands(): void
+    public function test_default_registration_contains_six_commands(): void
     {
         $registered = $this->registry->getAllCommands();
 
-        $this->assertCount(5, $registered);
+        $this->assertCount(6, $registered);
         $this->assertContainsOnlyInstancesOf(\App\KeyWords\Command::class, $registered);
     }
 

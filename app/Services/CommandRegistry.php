@@ -8,6 +8,7 @@ use App\KeyWords\Lottery;
 use App\KeyWords\MonteCarlo;
 use App\KeyWords\QiGua;
 use App\KeyWords\ShengSheQian;
+use App\KeyWords\Tarot;
 use App\KeyWords\XiaoLiuRen;
 
 class CommandRegistry
@@ -47,5 +48,6 @@ class CommandRegistry
         $this->register(new Lottery());
         $this->register(new MonteCarlo());
         $this->register(new XiaoLiuRen());
+        $this->register(new Tarot());
     }
 }
