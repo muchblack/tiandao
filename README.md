@@ -10,6 +10,7 @@
 | `抽神社籤` | 神社籤（ShengSheQian） | 隨機抽取神社籤詩 |
 | `大樂透號碼` | 大樂透統計（Lottery） | 近 10 期、1／3／5 年、歷史資料的冷熱號分析（民國年） |
 | `蒙地卡羅預測` | 蒙地卡羅（MonteCarlo） | 以蒙地卡羅法推估號碼分佈 |
+| `小六壬` / `起小六壬` / `六壬` | 小六壬（XiaoLiuRen） | 依當下農曆月日時推大安/留連/速喜/赤口/小吉/空亡，回月/日/時三宮各含事業/愛情/出行/失物/疾病/求財六面向 |
 
 非以上關鍵字會由 `Error` 命令回覆預設訊息。
 
@@ -19,6 +20,7 @@
 - Laravel `^10.10`
 - Node.js（前端資產建置）
 - LINE Bot SDK `linecorp/line-bot-sdk:^9.5`
+- 農曆／時辰計算 `6tail/lunar-php:^1.4`（小六壬使用）
 
 ## 安裝與啟動
 
@@ -105,6 +107,7 @@ php artisan montecarlo   # 測試蒙地卡羅預測
 
 - `yiJing/yiJing.json`：易經卦象與卦辭
 - `yiJing/Divination.json`：占卜輔助資料
+- `data/xiaoLiuRen/palaces.json`：小六壬六宮資料（卦辭 + 六面向解釋）
 - `BigLottery` model：台灣大樂透歷史開獎資料（統計分析用）
 
 ## 授權
