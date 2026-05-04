@@ -1,0 +1,1562 @@
+[
+  {
+    "id": 0,
+    "arcana": "major",
+    "suit": null,
+    "name_zh": "愚者",
+    "name_en": "The Fool",
+    "image": "00.jpg",
+    "upright": {
+      "keywords": ["新開始", "純真", "冒險", "信任直覺", "自由"],
+      "summary": "踏出舒適圈的第一步，放下顧慮、相信直覺。",
+      "meaning": "全新的起點與無限可能；心境如初生般純粹，不被過往經驗束縛。事業上適合啟動新計畫或轉換跑道，感情有新邂逅的徵兆，求財偏向冒險型機會。整體鼓勵向前，但仍須對後果保有最低限度的覺察。",
+      "waite_original": ["folly", "mania", "extravagance", "intoxication", "delirium", "frenzy", "bewrayment"]
+    },
+    "reversed": {
+      "keywords": ["魯莽", "計劃不周", "天真", "衝動", "逃避責任"],
+      "summary": "衝動行事而不思後果，或因過於樂觀而忽略風險。",
+      "meaning": "當前的樂觀可能流於草率，決策前資訊蒐集明顯不足；留意「冒險」是否成為逃避現實的藉口。事業避免衝動離職或盲目跟風，感情提防被表象迷惑，求財切勿信偏財承諾。建議放慢腳步、徵詢意見後再行動。",
+      "waite_original": ["negligence", "absence", "distribution", "carelessness", "apathy", "nullity", "vanity"]
+    }
+  },
+  {
+    "id": 1,
+    "arcana": "major",
+    "suit": null,
+    "name_zh": "魔術師",
+    "name_en": "The Magician",
+    "image": "01.jpg",
+    "upright": {
+      "keywords": ["創造力", "意志力", "技能", "主動行動", "資源整合"],
+      "summary": "手握所需資源，用意志力與技巧把想法化為現實。",
+      "meaning": "象徵掌控與創造的能量；風火水土四元素皆在你手邊，行動的時機到了。事業上是展現才華、開展專案的好時機，感情主動表態能成事，求財有靠專業換取報酬之兆。專注、自信即可成事。",
+      "waite_original": ["skill", "diplomacy", "address", "subtlety", "self-confidence", "will"]
+    },
+    "reversed": {
+      "keywords": ["欺瞞", "投機取巧", "意志薄弱", "技巧誤用", "缺乏自信"],
+      "summary": "技巧用偏方向，或被自身或他人欺瞞所誤導。",
+      "meaning": "能力被誤用或情報遭操弄；提防巧言令色之人。事業留意花言巧語的合作邀約，感情警覺對方話術，求財切忌相信「快速致富」的話術。回歸誠實與基本功才是出路。",
+      "waite_original": ["physician", "magus", "mental disease", "disgrace", "disquiet"]
+    }
+  },
+  {
+    "id": 2,
+    "arcana": "major",
+    "suit": null,
+    "name_zh": "女祭司",
+    "name_en": "The High Priestess",
+    "image": "02.jpg",
+    "upright": {
+      "keywords": ["直覺", "潛意識", "靜觀", "神秘", "內在智慧"],
+      "summary": "答案在內心深處，靜下來傾聽直覺。",
+      "meaning": "代表未顯露的真相與內在智慧；此刻適合沉澱、觀察、接收。事業宜暫緩決策、多收集情報，感情處於曖昧階段需耐心等待信號，求財不宜冒進。直覺會在靜默中浮現。",
+      "waite_original": ["secrets", "mystery", "future as yet unrevealed", "silence", "tenacity", "wisdom", "science"]
+    },
+    "reversed": {
+      "keywords": ["秘密外洩", "膚淺", "情緒失衡", "壓抑", "自欺"],
+      "summary": "忽略內心警訊或被表象矇蔽，需直面真相。",
+      "meaning": "壓抑的情緒終會反噬；秘密可能曝光或被自我欺騙。事業留意被忽略的細節，感情需誠實面對自己的真實感受，求財切勿被表面榮景迷惑。誠實是解方。",
+      "waite_original": ["passion", "moral or physical ardour", "conceit", "surface knowledge"]
+    }
+  },
+  {
+    "id": 3,
+    "arcana": "major",
+    "suit": null,
+    "name_zh": "皇后",
+    "name_en": "The Empress",
+    "image": "03.jpg",
+    "upright": {
+      "keywords": ["豐盛", "母性", "創造", "豐收", "感性"],
+      "summary": "豐收與滋養的時節，享受成果並照顧所愛。",
+      "meaning": "象徵生命力旺盛與物質豐足；播下的種子開始結實。事業迎來豐收與資源到位，感情關係穩固或有懷孕喜訊，求財正財旺、宜投資不動產。順應自然節奏即可享受成果。",
+      "waite_original": ["fruitfulness", "action", "initiative", "length of days", "the unknown", "clandestine", "difficulty", "doubt", "ignorance"]
+    },
+    "reversed": {
+      "keywords": ["過度依賴", "創造力枯竭", "感情糾葛", "佔有慾", "怠惰"],
+      "summary": "豐盛轉為依賴或停滯，需重整能量。",
+      "meaning": "母性能量過剩變成束縛；創造力陷入停滯。事業團隊內部出現依賴或推卸，感情有過度佔有或被佔有之虞，求財易因情感因素亂花錢。需重新找回個人邊界。",
+      "waite_original": ["light", "truth", "unravelling of involved matters", "public rejoicings", "vacillation"]
+    }
+  },
+  {
+    "id": 4,
+    "arcana": "major",
+    "suit": null,
+    "name_zh": "皇帝",
+    "name_en": "The Emperor",
+    "image": "04.jpg",
+    "upright": {
+      "keywords": ["權威", "穩定", "領導", "結構", "理性"],
+      "summary": "建立秩序、掌握主導權，以理性穩步推進。",
+      "meaning": "象徵建立穩固結構的力量；規則、紀律與理性是此刻的關鍵。事業適合擔任領導或制度化既有流程，感情中扮演保護與承擔者的角色，求財以穩健長線為主。建立邊界，拒絕情緒化決策。",
+      "waite_original": ["stability", "power", "protection", "realisation", "aid", "reason", "conviction", "authority", "will"]
+    },
+    "reversed": {
+      "keywords": ["專制", "僵化", "缺乏控制", "權力濫用", "幼稚"],
+      "summary": "權威過度或失序，導致關係或結構僵化。",
+      "meaning": "規則變成束縛，或反之失去掌控；缺乏成熟的判斷。事業可能遇到專制上司或過度控制的局面，感情中強勢或冷漠都會傷害關係，求財需檢視是否陷入死板的策略。柔軟與彈性才能突圍。",
+      "waite_original": ["benevolence", "compassion", "credit", "confusion to enemies", "obstruction", "immaturity"]
+    }
+  },
+  {
+    "id": 5,
+    "arcana": "major",
+    "suit": null,
+    "name_zh": "教皇",
+    "name_en": "The Hierophant",
+    "image": "05.jpg",
+    "upright": {
+      "keywords": ["傳統", "信念", "導師", "規範", "尋求建議"],
+      "summary": "依循傳統與正道，向有經驗者請益。",
+      "meaning": "象徵體制、信仰與教導的傳承；走經得起考驗的路。事業按部就班、跟隨體制升遷，感情走入婚姻或穩定承諾，求財循正規管道、忌偏門。此時不宜叛逆，求教明師反而省力。",
+      "waite_original": ["marriage", "alliance", "captivity", "servitude", "mercy and goodness", "inspiration"]
+    },
+    "reversed": {
+      "keywords": ["反叛", "教條主義", "新觀念", "脫離框架", "獨排眾議"],
+      "summary": "突破傳統束縛，但須承擔脫離體制的代價。",
+      "meaning": "舊體系不再適用；走自己的路成為必須。事業可能離開大公司創業、挑戰常規，感情打破世俗期待、不走主流路線，求財開拓非典型管道。需有獨自承擔孤獨的覺悟。",
+      "waite_original": ["society", "good understanding", "concord", "overkindness", "weakness"]
+    }
+  },
+  {
+    "id": 6,
+    "arcana": "major",
+    "suit": null,
+    "name_zh": "戀人",
+    "name_en": "The Lovers",
+    "image": "06.jpg",
+    "upright": {
+      "keywords": ["真愛", "關鍵抉擇", "和諧", "結合", "價值觀對齊"],
+      "summary": "面對重要選擇，遵從真心走價值認同的路。",
+      "meaning": "象徵深層連結與基於價值觀的選擇；不只感情，也包含人生方向的關鍵抉擇。事業面臨「跟對人 / 走對路」的選擇，感情遇真心契合的對象或須面對抉擇，求財以理念認同為先。聽從內心的聲音。",
+      "waite_original": ["attraction", "love", "beauty", "trials overcome"]
+    },
+    "reversed": {
+      "keywords": ["錯誤選擇", "價值衝突", "關係失衡", "誘惑", "猶豫不決"],
+      "summary": "選擇失誤或關係失衡，需重新檢視價值優先順序。",
+      "meaning": "選擇出於非真心或受誘惑左右；關係中的衝突浮現。事業在勉強合作中內耗，感情有第三者或價值觀分歧，求財被短期誘惑帶偏方向。重新確認自己真正想要什麼。",
+      "waite_original": ["failure", "foolish designs", "marriage frustrated", "contrarieties"]
+    }
+  },
+  {
+    "id": 7,
+    "arcana": "major",
+    "suit": null,
+    "name_zh": "戰車",
+    "name_en": "The Chariot",
+    "image": "07.jpg",
+    "upright": {
+      "keywords": ["決心", "勝利", "進取", "自律", "突破"],
+      "summary": "以堅定意志駕馭內外衝突，乘勝追擊。",
+      "meaning": "象徵在矛盾中取得控制、衝出阻礙；內在紀律與外在行動並重。事業競爭中勝出、晉升或拿下訂單，感情主動爭取或進入新階段，求財有衝刺機會。保持專注，敵人是分心。",
+      "waite_original": ["succour", "providence", "war", "triumph", "presumption", "vengeance", "trouble"]
+    },
+    "reversed": {
+      "keywords": ["失控", "衝突", "猶豫", "方向迷失", "內耗"],
+      "summary": "衝勁失控或方向不明，反陷入內耗。",
+      "meaning": "馬匹失調、戰車偏軌；目標模糊或內外戰線過多。事業專案延宕或團隊內鬥，感情爭吵頻繁或想法不一致，求財投資失準。先停下校準方向，再決定下一步。",
+      "waite_original": ["riot", "quarrel", "dispute", "litigation", "defeat"]
+    }
+  },
+  {
+    "id": 8,
+    "arcana": "major",
+    "suit": null,
+    "name_zh": "力量",
+    "name_en": "Strength",
+    "image": "08.jpg",
+    "upright": {
+      "keywords": ["內在力量", "勇氣", "耐心", "溫柔的堅定", "自我馴服"],
+      "summary": "以柔克剛，用耐心與愛而非蠻力征服困境。",
+      "meaning": "象徵情緒與本能的駕馭；用溫柔的堅定取勝。事業以毅力與情商化解困局，感情用包容化開緊張，求財需耐住性子守成。真正的力量是控制自己，不是控制別人。",
+      "waite_original": ["power", "energy", "action", "courage", "magnanimity", "complete success", "honours"]
+    },
+    "reversed": {
+      "keywords": ["脆弱", "失控情緒", "自我懷疑", "蠻力", "缺乏耐心"],
+      "summary": "情緒主導或耐心耗盡，自信動搖。",
+      "meaning": "內在的獅子失控或被壓抑過久；自我懷疑啃食信心。事業壓力下情緒失控，感情衝動爆發傷人，求財沒耐心而頻換策略。承認自己的脆弱，重新培養內在韌性。",
+      "waite_original": ["despotism", "abuse of power", "weakness", "discord", "disgrace"]
+    }
+  },
+  {
+    "id": 9,
+    "arcana": "major",
+    "suit": null,
+    "name_zh": "隱者",
+    "name_en": "The Hermit",
+    "image": "09.jpg",
+    "upright": {
+      "keywords": ["獨處", "內省", "智慧", "尋找答案", "孤獨而非孤單"],
+      "summary": "退一步獨處，內觀方能找到屬於自己的答案。",
+      "meaning": "象徵向內探索的智慧；他人提供不了的答案，需自己手提燈尋找。事業適合放下繁忙、進修充電，感情需要獨處空間或暫停關係沉澱，求財暫緩決策、多研究。沉澱後再行動。",
+      "waite_original": ["prudence", "treason", "dissimulation", "roguery", "corruption"]
+    },
+    "reversed": {
+      "keywords": ["過度孤立", "拒絕幫助", "隔絕", "迷失方向", "頑固"],
+      "summary": "獨處過頭變成自我封閉，反失去方向。",
+      "meaning": "獨自鑽研變成迷失；拒絕他人善意而錯失機會。事業閉門造車與市場脫節，感情把人推開後寂寞反噬，求財孤芳自賞錯過時機。是時候打開門讓陽光進來。",
+      "waite_original": ["concealment", "disguise", "policy", "fear", "unreasoned caution"]
+    }
+  },
+  {
+    "id": 10,
+    "arcana": "major",
+    "suit": null,
+    "name_zh": "命運之輪",
+    "name_en": "Wheel of Fortune",
+    "image": "10.jpg",
+    "upright": {
+      "keywords": ["轉機", "命運轉動", "機運", "週期循環", "順流而為"],
+      "summary": "命運之輪轉動，把握當下浮現的機會。",
+      "meaning": "象徵循環變動與不期而遇的轉機；運勢正向上行。事業有意想不到的機會或貴人，感情可能重逢舊識或新緣降臨，求財偏財運強。順勢而為勝過逆水行舟。",
+      "waite_original": ["destiny", "fortune", "success", "elevation", "luck", "felicity"]
+    },
+    "reversed": {
+      "keywords": ["逆境", "壞運氣", "週期下行", "失控感", "需耐心等待"],
+      "summary": "輪轉至下行段，等待週期循環過去。",
+      "meaning": "命運之輪轉到低點；無法強求只能熬過。事業專案受阻、計畫被打亂，感情遇外在因素干擾，求財守成為上、忌投機。低潮終會過去，蹲低是為了再起。",
+      "waite_original": ["increase", "abundance", "superfluity"]
+    }
+  },
+  {
+    "id": 11,
+    "arcana": "major",
+    "suit": null,
+    "name_zh": "正義",
+    "name_en": "Justice",
+    "image": "11.jpg",
+    "upright": {
+      "keywords": ["公平", "因果", "理性決策", "誠實", "法律"],
+      "summary": "天平兩端皆衡量過後，依公正之理做決定。",
+      "meaning": "象徵因果分明、賞罰得當；對得起良心的選擇會回饋你。事業憑實力與專業獲認可、合約簽訂順利，感情關係透明、互相負責，求財正財走旺、避免逃稅或不當得利。種什麼因得什麼果。",
+      "waite_original": ["equity", "rightness", "probity", "executive", "triumph of the deserving side in law"]
+    },
+    "reversed": {
+      "keywords": ["不公", "偏見", "推卸責任", "判斷失誤", "失衡"],
+      "summary": "天平傾斜，需檢視自身偏見或承擔該負之責。",
+      "meaning": "判斷被個人成見扭曲；該面對的責任在迴避。事業遇不公對待或自身偏見導致誤判，感情中推卸責任或無法面對問題，求財有法律糾紛之兆。誠實面對自己才能重建天平。",
+      "waite_original": ["law", "legal complications", "bigotry", "bias", "excessive severity"]
+    }
+  },
+  {
+    "id": 12,
+    "arcana": "major",
+    "suit": null,
+    "name_zh": "吊人",
+    "name_en": "The Hanged Man",
+    "image": "12.jpg",
+    "upright": {
+      "keywords": ["換位思考", "犧牲", "暫停", "放下", "新觀點"],
+      "summary": "倒掛看世界，放下執著反而豁然開朗。",
+      "meaning": "象徵主動的暫停與視角翻轉；做了該做的犧牲後智慧降臨。事業需放下過去策略、嘗試新觀點，感情願意為對方退讓反促進關係，求財暫停操作、進入觀望期。有時不動才是上策。",
+      "waite_original": ["wisdom", "circumspection", "discernment", "trials", "sacrifice", "intuition", "divination", "prophecy"]
+    },
+    "reversed": {
+      "keywords": ["徒勞無功", "無謂犧牲", "拒絕改變", "停滯", "受害者心態"],
+      "summary": "犧牲變成怨懟，或執著不放讓自己卡住。",
+      "meaning": "為錯的人事物犧牲；犧牲心態變成受害者意識。事業苦撐錯誤路線、付出無回報，感情中過度委屈反失自我，求財久候不來但又不肯轉向。問自己：放下會失去什麼，不放下又得到什麼？",
+      "waite_original": ["selfishness", "the crowd", "body politic"]
+    }
+  },
+  {
+    "id": 13,
+    "arcana": "major",
+    "suit": null,
+    "name_zh": "死神",
+    "name_en": "Death",
+    "image": "13.jpg",
+    "upright": {
+      "keywords": ["結束", "蛻變", "斷捨離", "重生", "必要的告別"],
+      "summary": "舊階段結束，必要的告別才能迎來新生。",
+      "meaning": "象徵深刻的轉化與必然的結束；不是真的死亡而是徹底的更新。事業告別不適合的職位或關係，感情有結束舊緣才能展開新篇，求財改變舊有金錢觀。不抗拒終結才能擁抱新生。",
+      "waite_original": ["end", "mortality", "destruction", "corruption", "loss of a benefactor", "many contrarieties", "failure of marriage projects"]
+    },
+    "reversed": {
+      "keywords": ["抗拒改變", "停滯", "無法放手", "緩慢轉化", "卡住"],
+      "summary": "明知該結束卻不肯放手，使自己卡在過渡期。",
+      "meaning": "拒絕承認舊事物已死；轉化的痛苦被拖長。事業苦撐註定失敗的專案，感情明知該分手卻拖延，求財守住已不再增值的資產。承認結束才能釋放能量重新出發。",
+      "waite_original": ["inertia", "sleep", "lethargy", "petrifaction", "somnambulism", "hope destroyed"]
+    }
+  },
+  {
+    "id": 14,
+    "arcana": "major",
+    "suit": null,
+    "name_zh": "節制",
+    "name_en": "Temperance",
+    "image": "14.jpg",
+    "upright": {
+      "keywords": ["平衡", "調和", "中庸", "耐心混合", "療癒"],
+      "summary": "在兩極之間找到中道，混合對立成為新整體。",
+      "meaning": "象徵調和對立、找到平衡的藝術；煉金術般的內在工作。事業需協調不同意見、走中庸之道，感情療癒舊傷並建立健康節奏，求財均衡配置、忌貪心。不疾不徐是訣竅。",
+      "waite_original": ["economy", "moderation", "frugality", "management", "accommodation"]
+    },
+    "reversed": {
+      "keywords": ["失衡", "極端", "缺乏耐心", "過度", "衝突難解"],
+      "summary": "天平過度傾斜，極端思維使狀況惡化。",
+      "meaning": "陷入二元對立、無法調和；缺乏耐心讓混合過程失敗。事業極端策略不見效、團隊內衝突難解，感情情緒兩極、忽冷忽熱，求財貪多嚼不爛。回到中道，慢即是快。",
+      "waite_original": ["churches", "religions", "sects", "priesthood", "disunion", "unfortunate combinations", "competing interests"]
+    }
+  },
+  {
+    "id": 15,
+    "arcana": "major",
+    "suit": null,
+    "name_zh": "惡魔",
+    "name_en": "The Devil",
+    "image": "15.jpg",
+    "upright": {
+      "keywords": ["束縛", "慾望", "依賴", "誘惑", "陰影面"],
+      "summary": "被慾望或惡習束縛，鎖鏈其實鬆動只待覺察。",
+      "meaning": "象徵被物質、情慾或上癮綁住的狀態；不是真的被困，而是不敢放手。事業被金錢或地位綁架做不想做的事，感情陷入毒性關係難以離開，求財沉迷投機或揮霍無度。意識到鎖鏈是鬆的，是解脫第一步。",
+      "waite_original": ["ravage", "violence", "vehemence", "extraordinary efforts", "force", "fatality"]
+    },
+    "reversed": {
+      "keywords": ["掙脫枷鎖", "覺醒", "戒癮", "重獲自由", "誠實面對"],
+      "summary": "看清束縛本質，開始拿回主導權。",
+      "meaning": "鎖鏈被看穿；上癮、依賴或不健康關係開始鬆動。事業辭去消耗自己的工作，感情走出毒性關係，求財戒掉浪費的習慣。承認自己一直握著解鎖鑰匙。",
+      "waite_original": ["evil fatality", "weakness", "pettiness", "blindness"]
+    }
+  },
+  {
+    "id": 16,
+    "arcana": "major",
+    "suit": null,
+    "name_zh": "塔",
+    "name_en": "The Tower",
+    "image": "16.jpg",
+    "upright": {
+      "keywords": ["突發劇變", "崩塌", "醒悟", "震撼", "舊結構瓦解"],
+      "summary": "猝不及防的崩塌，但瓦解的是不真實的建築。",
+      "meaning": "象徵建立在虛假基礎上的事物突然倒塌；震撼但必要。事業遇突發裁員或重大變故，感情戲劇性的破裂或揭穿真相，求財投資突然失利。痛苦但真相浮現，從廢墟重建才更穩固。",
+      "waite_original": ["misery", "distress", "indigence", "adversity", "calamity", "disgrace", "deception", "ruin"]
+    },
+    "reversed": {
+      "keywords": ["勉強維持", "延後崩塌", "小幅震盪", "拒絕改變", "壓抑危機"],
+      "summary": "強撐表面平靜，但裂縫已生只是延後。",
+      "meaning": "拒絕承認結構已不穩；用膠帶補漏遲早爆發。事業逃避面對組織問題，感情粉飾太平不談根本矛盾，求財套牢卻不肯停損。早面對小痛勝於拖到大爆發。",
+      "waite_original": ["lesser degree of misery", "oppression", "imprisonment", "tyranny"]
+    }
+  },
+  {
+    "id": 17,
+    "arcana": "major",
+    "suit": null,
+    "name_zh": "星星",
+    "name_en": "The Star",
+    "image": "17.jpg",
+    "upright": {
+      "keywords": ["希望", "靈感", "療癒", "樂觀", "指引方向"],
+      "summary": "歷劫之後的療癒之夜，星光指引前路。",
+      "meaning": "象徵塔倒之後的希望與重建；輕柔但堅定的曙光。事業看到方向、迎來新靈感，感情走出傷痛、重建信任，求財信心回穩、適合長線布局。用最柔軟的姿態繼續前進。",
+      "waite_original": ["loss", "theft", "privation", "abandonment", "hope", "bright prospects"]
+    },
+    "reversed": {
+      "keywords": ["失去希望", "悲觀", "靈感枯竭", "信心動搖", "迷失"],
+      "summary": "星光被烏雲遮蔽，需重新點亮內在希望。",
+      "meaning": "對未來失去信任；夢想顯得遙不可及。事業看不到方向陷入低潮，感情自我懷疑而退縮，求財焦慮過頭錯失機會。先照顧好自己的能量，希望會慢慢回來。",
+      "waite_original": ["arrogance", "haughtiness", "impotence"]
+    }
+  },
+  {
+    "id": 18,
+    "arcana": "major",
+    "suit": null,
+    "name_zh": "月亮",
+    "name_en": "The Moon",
+    "image": "18.jpg",
+    "upright": {
+      "keywords": ["幻象", "潛意識恐懼", "迷霧", "直覺浮現", "未明真相"],
+      "summary": "霧中行路，分不清現實與幻象，依賴直覺。",
+      "meaning": "象徵潛意識浮動、真相未明的混沌期；恐懼可能放大事實。事業情報不明、決策易誤判，感情中疑神疑鬼或對方藏事，求財謠言滿天勿輕信。等霧散再決策，相信直覺多於想像。",
+      "waite_original": ["hidden enemies", "danger", "calumny", "darkness", "terror", "deception", "occult forces", "error"]
+    },
+    "reversed": {
+      "keywords": ["真相揭露", "撥雲見日", "克服恐懼", "誤會澄清", "迷霧消散"],
+      "summary": "月光退去，真相逐漸清晰，恐懼解除。",
+      "meaning": "曾經的混沌變得透明；隱藏的事浮上檯面。事業真相揭曉、立場明朗，感情誤會澄清或騙局曝光，求財看清陷阱、避開損失。直面真相需要勇氣但解脫。",
+      "waite_original": ["instability", "inconstancy", "silence", "lesser deception"]
+    }
+  },
+  {
+    "id": 19,
+    "arcana": "major",
+    "suit": null,
+    "name_zh": "太陽",
+    "name_en": "The Sun",
+    "image": "19.jpg",
+    "upright": {
+      "keywords": ["喜悅", "成功", "活力", "光明", "孩子般的純粹"],
+      "summary": "陽光普照，諸事順遂、光明喜悅。",
+      "meaning": "象徵盛大的成功與發自內在的喜悅；最吉利的牌之一。事業成果豐碩、能見度高，感情甜蜜或有喜訊（婚禮、孩子），求財正財旺、投資得利。盡情享受此刻，光分給他人也照亮自己。",
+      "waite_original": ["material happiness", "fortunate marriage", "contentment"]
+    },
+    "reversed": {
+      "keywords": ["短暫陰霾", "成功延後", "自信過頭", "樂觀失準", "外強中乾"],
+      "summary": "陽光被雲遮，喜悅打折但仍非凶兆。",
+      "meaning": "成功還在但被延後或縮水；樂觀變成自滿。事業榮耀延期但本質仍佳，感情有小裂痕但可修復，求財樂觀過頭高估報酬。回歸踏實、別讓陽光燒過頭。",
+      "waite_original": ["clouded outlook", "unhappy marriage in a way"]
+    }
+  },
+  {
+    "id": 20,
+    "arcana": "major",
+    "suit": null,
+    "name_zh": "審判",
+    "name_en": "Judgement",
+    "image": "20.jpg",
+    "upright": {
+      "keywords": ["覺醒", "重生", "召喚", "回顧", "新階段"],
+      "summary": "聽到內在召喚，過去經驗整合後迎來新生。",
+      "meaning": "象徵深層的覺醒與從過往中學習的整合；一個明確的「應當如此」浮現。事業迎來重要轉折或舊機會復活，感情舊緣再續或對關係有全新領悟，求財徹底檢討理財觀後重新出發。回應你心中的呼喚。",
+      "waite_original": ["change of position", "renewal", "outcome", "total loss through lawsuit"]
+    },
+    "reversed": {
+      "keywords": ["錯失召喚", "自我批判", "悔恨", "拒絕成長", "猶豫不決"],
+      "summary": "聽到召喚卻不敢回應，或被悔恨綁住前行。",
+      "meaning": "知道該改變但缺乏勇氣行動；被自我審判困住。事業看到機會卻自我懷疑而錯失，感情糾結於過去無法前進，求財被歷史失敗陰影綁手綁腳。原諒過去的自己，給此刻一個機會。",
+      "waite_original": ["weakness", "pusillanimity", "simplicity", "deliberation", "decision", "sentence"]
+    }
+  },
+  {
+    "id": 21,
+    "arcana": "major",
+    "suit": null,
+    "name_zh": "世界",
+    "name_en": "The World",
+    "image": "21.jpg",
+    "upright": {
+      "keywords": ["完成", "圓滿", "整合", "成就", "新旅程"],
+      "summary": "一段重要旅程圓滿結束，準備迎向更大的世界。",
+      "meaning": "象徵階段性完成與全方位的整合；走過愚者的路、抵達世界。事業專案成功收尾或職涯里程碑達成，感情關係到達穩定圓滿階段，求財累積成果可觀、可考慮新階段布局。慶祝完成，再啟新章。",
+      "waite_original": ["assured success", "recompense", "voyage", "route", "emigration", "flight", "change of place"]
+    },
+    "reversed": {
+      "keywords": ["未竟之事", "缺最後一哩", "停滯", "結束受阻", "需收尾"],
+      "summary": "差最後一哩路尚未完成，需補上才能真正結束。",
+      "meaning": "已接近完成但卡在收尾；某個遺漏阻擋全面圓滿。事業專案差臨門一腳卻拖延，感情長跑卻遲未承諾，求財差最後一個動作未到位。找出缺失的那塊拼圖，才能真正翻頁。",
+      "waite_original": ["inertia", "fixity", "stagnation", "permanence"]
+    }
+  },
+  {
+    "id": 22,
+    "arcana": "minor",
+    "suit": "wands",
+    "name_zh": "權杖王牌",
+    "name_en": "Ace of Wands",
+    "image": "22.jpg",
+    "upright": {
+      "keywords": ["創造火花", "新計畫", "靈感湧現", "行動力", "衝勁"],
+      "summary": "創造的火種點燃，把熱情化為行動的時刻。",
+      "meaning": "象徵全新的創造能量降臨；想法、熱情或慾望都很鮮活。事業有新專案或創業靈感湧現，感情有強烈吸引或新關係萌芽，求財有開展副業或新財源的契機。立刻動手做才不浪費這份能量。",
+      "waite_original": ["creation", "invention", "enterprise", "principle", "beginning", "source", "birth", "family", "origin"]
+    },
+    "reversed": {
+      "keywords": ["創意受阻", "動力不足", "起步延遲", "信心不足", "計畫流產"],
+      "summary": "火花尚未點燃或熄滅，動力消散。",
+      "meaning": "創造能量受阻或方向不對；激情被現實澆熄。事業計畫起步無力或被擱置，感情熱情消退或時機不對，求財新機會看似誘人實則空轉。先檢視能量為何耗散，再決定要不要重新點火。",
+      "waite_original": ["fall", "decadence", "ruin", "perdition", "clouded joy"]
+    }
+  },
+  {
+    "id": 23,
+    "arcana": "minor",
+    "suit": "wands",
+    "name_zh": "權杖二",
+    "name_en": "Two of Wands",
+    "image": "23.jpg",
+    "upright": {
+      "keywords": ["規劃未來", "視野開闊", "抉擇路線", "個人力量", "等待時機"],
+      "summary": "手握地球儀的時刻，思考要往哪裡去。",
+      "meaning": "象徵成功之後的下一步抉擇；視野開闊但須做選擇。事業已站穩腳步、思考拓展方向，感情處於決定要不要更進一步的關口，求財考慮多元配置或開拓新標的。先確定目的地，再規劃路線。",
+      "waite_original": ["riches", "fortune", "magnificence", "physical suffering", "disease", "sadness", "mortification"]
+    },
+    "reversed": {
+      "keywords": ["缺乏遠見", "害怕未知", "計畫受阻", "自我設限", "失去掌控"],
+      "summary": "停在原地不敢遠望，恐懼鎖住下一步。",
+      "meaning": "成就之後不敢冒險；對未知的恐懼讓你停下。事業守成不前、錯過拓展機會，感情陷入舒適圈不願往前推進，求財擔心改變而抱舊資產不放。離開目前的山頭才看得見更遠的景色。",
+      "waite_original": ["surprise", "wonder", "enchantment", "emotion", "trouble", "fear"]
+    }
+  },
+  {
+    "id": 24,
+    "arcana": "minor",
+    "suit": "wands",
+    "name_zh": "權杖三",
+    "name_en": "Three of Wands",
+    "image": "24.jpg",
+    "upright": {
+      "keywords": ["拓展", "等待回報", "國際視野", "合作", "預見成果"],
+      "summary": "船已啟航，靜候歸來；遠方的機會在路上。",
+      "meaning": "象徵投資後的等待期；播下的種子在發芽。事業專案已動工、等待開花結果，感情處於遠距或長線經營階段，求財有海外或跨域投資的機會。耐心和遠見是此刻的關鍵。",
+      "waite_original": ["established strength", "enterprise", "effort", "trade", "commerce", "discovery", "co-operation"]
+    },
+    "reversed": {
+      "keywords": ["拓展受阻", "計畫延遲", "短視近利", "缺乏耐心", "合作破局"],
+      "summary": "船遲遲未歸，計畫推進不如預期。",
+      "meaning": "預期的回報延遲或落空；視野過於短淺。事業海外或跨域案受挫，感情遠距關係出現裂痕，求財投資成果不如預期。檢視策略而非急著拋售或撤退。",
+      "waite_original": ["end of troubles", "cessation of adversity", "toil", "disappointment"]
+    }
+  },
+  {
+    "id": 25,
+    "arcana": "minor",
+    "suit": "wands",
+    "name_zh": "權杖四",
+    "name_en": "Four of Wands",
+    "image": "25.jpg",
+    "upright": {
+      "keywords": ["慶祝", "安定", "階段性成果", "家庭和樂", "里程碑"],
+      "summary": "豐收慶典時刻，與所愛共享階段成果。",
+      "meaning": "象徵階段性成功與穩定的家園；值得歡慶的里程碑。事業專案告一段落、團隊慶功，感情關係穩固或有訂婚結婚之兆，求財收成既有成果、適合犒賞自己。停下來感謝身邊一起努力的人。",
+      "waite_original": ["country life", "haven of refuge", "domestic harvest-home", "repose", "concord", "harmony", "prosperity", "peace"]
+    },
+    "reversed": {
+      "keywords": ["內部緊張", "慶祝延遲", "不穩定", "缺乏歸屬", "過渡期"],
+      "summary": "歡慶的氣氛被陰影遮蔽，需先處理內部問題。",
+      "meaning": "表面慶祝下藏著張力；安穩感不如預期。事業團隊慶祝中暗藏分歧，感情看似和諧但溝通不夠，求財看似豐收但有隱憂。先把家門內整理好，再開門慶祝也不遲。",
+      "waite_original": ["prosperity in lesser sense", "increase", "felicity", "beauty", "embellishment"]
+    }
+  },
+  {
+    "id": 26,
+    "arcana": "minor",
+    "suit": "wands",
+    "name_zh": "權杖五",
+    "name_en": "Five of Wands",
+    "image": "26.jpg",
+    "upright": {
+      "keywords": ["競爭", "衝突", "意見不合", "練習較量", "成長磨練"],
+      "summary": "群雄各執一辭的爭論，但這是必要的磨練。",
+      "meaning": "象徵良性但混亂的競爭；意見不一但目標相近。事業團隊內部辯論激烈、各有主張，感情中為小事爭執但非根本問題，求財遇到強勁同行競爭。把它當作練功而非戰爭。",
+      "waite_original": ["imitation", "sham fight", "strenuous competition", "struggle", "battle of life", "gold", "gain", "opulence"]
+    },
+    "reversed": {
+      "keywords": ["紛爭升級", "內耗", "訴訟", "內部分裂", "化解衝突"],
+      "summary": "小爭執變成大裂痕，或反之爭吵後達成共識。",
+      "meaning": "衝突無法收斂或反向；演變成訴訟或徹底決裂，亦或意外達成和解。事業內鬥升級至撕破臉，感情冷戰演變為冷漠分手，求財有法律糾紛之兆。設一條停損線，過了就轉場。",
+      "waite_original": ["litigation", "disputes", "trickery", "contradiction"]
+    }
+  },
+  {
+    "id": 27,
+    "arcana": "minor",
+    "suit": "wands",
+    "name_zh": "權杖六",
+    "name_en": "Six of Wands",
+    "image": "27.jpg",
+    "upright": {
+      "keywords": ["勝利", "公開肯定", "凱旋", "領導力", "自信"],
+      "summary": "凱旋歸來，勝利被眾人看見。",
+      "meaning": "象徵公開的成功與被認可；努力有了實質回報。事業升遷、得獎或拿下大案，感情關係被祝福或正式公開，求財正財豐厚、業績獎金到位。享受榮耀，也記得謝謝一路扶持之人。",
+      "waite_original": ["victor triumphing", "great news", "expectation crowned", "crown of hope"]
+    },
+    "reversed": {
+      "keywords": ["勝利推遲", "自負", "缺乏支持", "名聲受損", "恐懼失敗"],
+      "summary": "預期的喝采未到，或自滿招致反感。",
+      "meaning": "勝利被延後或被搶走；自信過頭轉成傲慢。事業功勞被瓜分或專案延期收割，感情自我中心使對方退卻，求財投資看似要贏卻翻盤。內斂謙遜會讓你走更遠。",
+      "waite_original": ["apprehension", "fear", "treachery", "disloyalty", "indefinite delay"]
+    }
+  },
+  {
+    "id": 28,
+    "arcana": "minor",
+    "suit": "wands",
+    "name_zh": "權杖七",
+    "name_en": "Seven of Wands",
+    "image": "28.jpg",
+    "upright": {
+      "keywords": ["堅守立場", "捍衛", "抵抗壓力", "勇氣", "上風優勢"],
+      "summary": "高地之上獨對六敵，堅守立場便能守住。",
+      "meaning": "象徵以一抗多但占優勢；信念與位置都站得住腳。事業面對質疑與挑戰但你的觀點站得住，感情遭到外力干擾須堅守初心，求財原本部位被質疑但堅持是對的。挺住眼下這一波即可。",
+      "waite_original": ["valour", "discussion", "wordy strife", "negotiations", "war of trade", "competition", "success"]
+    },
+    "reversed": {
+      "keywords": ["退讓", "信心崩潰", "不堪壓力", "棄守", "焦慮過度"],
+      "summary": "壓力下動搖，原本守得住的卻棄守。",
+      "meaning": "信心被消磨；該守的位置卻退讓。事業在壓力下放棄了堅持的原則，感情經不起閒言閒語而退縮，求財被市場恐慌帶走立場。喘口氣，但不要輕易讓出已得的高地。",
+      "waite_original": ["perplexity", "embarrassments", "anxiety", "indecision"]
+    }
+  },
+  {
+    "id": 29,
+    "arcana": "minor",
+    "suit": "wands",
+    "name_zh": "權杖八",
+    "name_en": "Eight of Wands",
+    "image": "29.jpg",
+    "upright": {
+      "keywords": ["快速進展", "行動加速", "訊息抵達", "旅行", "突破停滯"],
+      "summary": "八支權杖飛速而至，停滯的事突然加速。",
+      "meaning": "象徵突破停滯的快速進展；訊息、機會或人事紛至沓來。事業專案進度突然加速、Email 和聯絡爆量，感情有快速進展或主動表白，求財有速戰速決的機會。動作要快、別錯過時機。",
+      "waite_original": ["activity in undertakings", "swiftness", "great haste", "great hope", "speed towards an end", "arrows of love"]
+    },
+    "reversed": {
+      "keywords": ["延遲", "計畫拖延", "通訊失誤", "步調混亂", "等待未果"],
+      "summary": "權杖卡在空中，預期的進展遲遲不到。",
+      "meaning": "預期的快速進展被延宕；訊息失誤或溝通不順。事業專案延期或關鍵訊息漏接，感情等不到回應或誤會頻生，求財看好的標的遲未啟動。先確認資訊管道是否通暢。",
+      "waite_original": ["arrows of jealousy", "internal dispute", "stingings of conscience", "quarrels", "domestic disputes"]
+    }
+  },
+  {
+    "id": 30,
+    "arcana": "minor",
+    "suit": "wands",
+    "name_zh": "權杖九",
+    "name_en": "Nine of Wands",
+    "image": "30.jpg",
+    "upright": {
+      "keywords": ["堅持到底", "韌性", "警戒", "最後防線", "戰過的勇者"],
+      "summary": "戰傷未癒仍站著守，最後一哩路撐住即可。",
+      "meaning": "象徵歷經磨難後的最後堅持；警戒中累積韌性。事業專案接近終點但累積疲態須再撐一波，感情經歷考驗後對下一步小心翼翼，求財長期抗戰將近結束。再堅持一下，前線就在眼前。",
+      "waite_original": ["strength in opposition", "delay", "suspension", "adjournment"]
+    },
+    "reversed": {
+      "keywords": ["力竭", "偏執", "防禦過度", "體力透支", "長期壓力"],
+      "summary": "防備過頭把朋友也擋在外，疲憊已透支。",
+      "meaning": "戒心過重變成偏執；長期警戒消耗精力。事業疑神疑鬼的氛圍讓團隊離心，感情被過去經驗綁架不敢信任新緣，求財守得太緊錯失機會。試著放下盾牌看看，世界沒有那麼多敵人。",
+      "waite_original": ["obstacles", "adversity", "calamity"]
+    }
+  },
+  {
+    "id": 31,
+    "arcana": "minor",
+    "suit": "wands",
+    "name_zh": "權杖十",
+    "name_en": "Ten of Wands",
+    "image": "31.jpg",
+    "upright": {
+      "keywords": ["重擔", "過度負荷", "責任沉重", "接近終點", "過勞"],
+      "summary": "扛了一捆權杖前行，重但終點在望。",
+      "meaning": "象徵接近完成的負擔；雖累但已可見終點。事業承擔過多角色、需學會委派，感情關係中扛得太多需溝通分擔，求財包山包海反失焦。看清哪些是真的必要扛的。",
+      "waite_original": ["oppression", "fortune", "gain", "any kind of success", "oppression of these things"]
+    },
+    "reversed": {
+      "keywords": ["卸下重擔", "學會放手", "委派任務", "解脫壓力", "重新分配"],
+      "summary": "終於放下肩上權杖，學會說「不」。",
+      "meaning": "承認自己扛不動所有；卸下不該獨自承擔的部分。事業劃清職責邊界、不再 over-commit，感情拒絕當別人的情緒垃圾桶，求財停止過度分散資源。承認界線是健康的開始。",
+      "waite_original": ["counsels", "contrarieties", "treachery", "political subtlety", "lies that prevail"]
+    }
+  },
+  {
+    "id": 32,
+    "arcana": "minor",
+    "suit": "wands",
+    "name_zh": "權杖侍者",
+    "name_en": "Page of Wands",
+    "image": "32.jpg",
+    "upright": {
+      "keywords": ["熱情新手", "探索", "學習", "好消息", "創意萌芽"],
+      "summary": "帶著熱情與好奇心，準備出發探索。",
+      "meaning": "象徵剛起步的熱情與探索慾；好消息或新計畫的種子。事業新人入職或新領域學習充滿熱情，感情新邂逅或關係注入新意，求財有新財源訊號或學習新理財。保持初學者的心態。",
+      "waite_original": ["dark young man", "faithful", "lover", "envoy", "postman", "favourable testimony", "family intelligence"]
+    },
+    "reversed": {
+      "keywords": ["三分鐘熱度", "不專心", "壞消息", "計畫早夭", "缺乏方向"],
+      "summary": "熱情燃完即熄，方向尚未確立。",
+      "meaning": "新計畫熱度迅速消退；訊息令人失望。事業新人能力被高估或新方向沒持續，感情曖昧期未進展即冷卻，求財新機會雷聲大雨點小。先確認自己真的想要什麼，再投入。",
+      "waite_original": ["anecdotes", "announcements", "evil news", "indecision", "instability"]
+    }
+  },
+  {
+    "id": 33,
+    "arcana": "minor",
+    "suit": "wands",
+    "name_zh": "權杖騎士",
+    "name_en": "Knight of Wands",
+    "image": "33.jpg",
+    "upright": {
+      "keywords": ["行動力", "冒險", "衝刺", "熱情奔放", "改變"],
+      "summary": "騎士策馬衝出，能量滿溢、勇往直前。",
+      "meaning": "象徵充沛的行動力與冒險精神；改變和移動的牌。事業有出差、轉職或重大轉變的徵兆，感情遇上熱情奔放型對象或關係進入激情期，求財適合短線快攻。動起來再校準方向。",
+      "waite_original": ["departure", "absence", "flight", "emigration", "dark young man", "friendly", "change of residence"]
+    },
+    "reversed": {
+      "keywords": ["衝動莽撞", "半途而廢", "拖延", "缺乏方向", "急躁"],
+      "summary": "馬奔離方向或耗盡氣力，急躁壞事。",
+      "meaning": "速度沒問題，方向有誤；急躁讓努力打折。事業跳槽或大動作前未深思而後悔，感情中熱情過度或冷得突然，求財追高殺低、頻繁進出失利。慢半拍可能省半年。",
+      "waite_original": ["rupture", "division", "interruption", "discord"]
+    }
+  },
+  {
+    "id": 34,
+    "arcana": "minor",
+    "suit": "wands",
+    "name_zh": "權杖皇后",
+    "name_en": "Queen of Wands",
+    "image": "34.jpg",
+    "upright": {
+      "keywords": ["自信魅力", "領導力", "熱情", "獨立", "創造力旺盛"],
+      "summary": "光芒四射的女王坐穩王座，自信引人追隨。",
+      "meaning": "象徵成熟自信的領導魅力；不靠他人定義自己。事業展現領導力、被視為意見領袖，感情關係中扮演主導與激勵者角色，求財自信為主、副業或個人品牌帶來收入。火光是給自己也給別人。",
+      "waite_original": ["dark woman", "countrywoman", "friendly", "chaste", "loving", "honourable", "love of money", "success in business"]
+    },
+    "reversed": {
+      "keywords": ["嫉妒", "自我中心", "控制慾", "報復心", "失衡熱情"],
+      "summary": "光芒變成燒灼他人的火，需察覺自身陰影。",
+      "meaning": "熱情過度或自信過頭；嫉妒與控制慾抬頭。事業團隊中過於主導壓抑他人，感情佔有慾強或忌妒心爆發，求財易因情緒亂進出。當太陽燒過頭就會變成核爆。",
+      "waite_original": ["good", "economical", "obliging", "opposition", "jealousy", "deceit", "infidelity"]
+    }
+  },
+  {
+    "id": 35,
+    "arcana": "minor",
+    "suit": "wands",
+    "name_zh": "權杖國王",
+    "name_en": "King of Wands",
+    "image": "35.jpg",
+    "upright": {
+      "keywords": ["願景領袖", "大局觀", "魅力與權威", "創業家", "戰略思維"],
+      "summary": "願景型領袖，能把火種點燃成燎原之勢。",
+      "meaning": "象徵成熟的開創者與領導者；不只行動更有戰略。事業適合開疆闢土、獨當一面或當別人的導師，感情扮演成熟可靠的伴侶或父親角色，求財有大格局的長線投資觀。引領他人是你的天命。",
+      "waite_original": ["dark man", "friendly", "honest", "conscientious", "honesty", "unexpected heritage"]
+    },
+    "reversed": {
+      "keywords": ["專制", "急躁衝動", "缺乏紀律", "過度自信", "高高在上"],
+      "summary": "權威轉為傲慢，戰略失準變成獨斷。",
+      "meaning": "領導變專制；自信變自大。事業作風強勢失人心，感情強勢主導讓對方喘不過氣，求財自信過頭未做風險管理。回到聆聽，火才能持續燒得久。",
+      "waite_original": ["good but severe", "austere", "tolerant"]
+    }
+  },
+  {
+    "id": 36,
+    "arcana": "minor",
+    "suit": "cups",
+    "name_zh": "聖杯王牌",
+    "name_en": "Ace of Cups",
+    "image": "36.jpg",
+    "upright": {
+      "keywords": ["情感泉湧", "新感情", "靈性開啟", "愛的能量", "豐沛"],
+      "summary": "情感之杯滿溢，愛與療癒的能量降臨。",
+      "meaning": "象徵全新的情感能量湧現；愛、慈悲、創造力都豐沛。事業有讓人投入的新案讓人發自內心想做，感情有新緣份或關係深化，求財有出於熱情而非貪念的新財路。讓情感流動、不要憋住。",
+      "waite_original": ["house of the true heart", "joy", "content", "abode", "nourishment", "abundance", "fertility", "felicity"]
+    },
+    "reversed": {
+      "keywords": ["情感封閉", "感情停滯", "失去熱情", "情緒壓抑", "愛意流失"],
+      "summary": "杯中水溢出或乾涸，情感連結出問題。",
+      "meaning": "情感被堵住或被錯置；杯內無水可給。事業失去當初的熱情、行屍走肉，感情關係冷淡或單方付出，求財投入沒共鳴的領域。重新找回讓你發自內心快樂的事。",
+      "waite_original": ["house of the false heart", "mutation", "instability", "revolution"]
+    }
+  },
+  {
+    "id": 37,
+    "arcana": "minor",
+    "suit": "cups",
+    "name_zh": "聖杯二",
+    "name_en": "Two of Cups",
+    "image": "37.jpg",
+    "upright": {
+      "keywords": ["雙向連結", "互相吸引", "夥伴關係", "和諧", "承諾"],
+      "summary": "兩杯共飲的時刻，平等而真誠的連結。",
+      "meaning": "象徵雙向平等的連結；不論是戀人、夥伴或合作。事業遇到契合的合作對象或互補的夥伴，感情關係進入互相承諾的階段，求財合夥獲利機會佳。重點在「對等」，不是單方付出。",
+      "waite_original": ["love", "passion", "friendship", "affinity", "union", "concord", "sympathy"]
+    },
+    "reversed": {
+      "keywords": ["關係失衡", "誤解", "單方付出", "暗中較勁", "失去信任"],
+      "summary": "兩杯不平，連結出現裂痕。",
+      "meaning": "原本互信的關係出現失衡；溝通中斷或暗藏比較。事業合作關係因利益分配而緊張，感情中一方付出多另一方不領情，求財合夥的信任基礎動搖。先平衡兩杯，再續飲下去。",
+      "waite_original": ["self-love", "secret jealousy"]
+    }
+  },
+  {
+    "id": 38,
+    "arcana": "minor",
+    "suit": "cups",
+    "name_zh": "聖杯三",
+    "name_en": "Three of Cups",
+    "image": "38.jpg",
+    "upright": {
+      "keywords": ["慶祝", "友誼", "團聚", "群體喜悅", "共享豐收"],
+      "summary": "三杯舉杯共慶，與朋友一同享受豐收。",
+      "meaning": "象徵社群、友誼與共享的喜悅；不只屬於兩人的快樂。事業團隊慶功或社群網絡帶來新機會，感情有派對、聚會中遇緣，求財透過人脈引介得財。慶祝是充電，也是吸引下一輪的好運。",
+      "waite_original": ["conclusion in plenty", "perfection", "merriment", "happy issue", "victory", "fulfilment", "solace", "healing"]
+    },
+    "reversed": {
+      "keywords": ["過度社交", "三角關係", "派對心累", "閒言閒語", "情誼變質"],
+      "summary": "酒喝過頭或圈子變質，需後退一步。",
+      "meaning": "歡樂變成消耗；社交圈出現是非或分裂。事業派系鬥爭浮現、辦公室政治影響工作，感情有第三者介入或社交圈耗能，求財被酒肉朋友帶偏。減少無效社交，留一點清靜。",
+      "waite_original": ["expedition", "dispatch", "achievement", "end", "excess in physical enjoyment", "pleasures of the senses"]
+    }
+  },
+  {
+    "id": 39,
+    "arcana": "minor",
+    "suit": "cups",
+    "name_zh": "聖杯四",
+    "name_en": "Four of Cups",
+    "image": "39.jpg",
+    "upright": {
+      "keywords": ["倦怠", "錯失機會", "若有所失", "停滯不前", "自我反省"],
+      "summary": "面前一杯沒看到，沉浸於過去三杯的失意。",
+      "meaning": "象徵情感的倦怠期；對眼前的不滿讓你忽略真正的禮物。事業陷入怠倦感、新機會送上門卻沒看見，感情對現有關係感不滿但說不上來，求財好機會擺眼前但你心不在焉。抬頭看，第四個杯子在等你。",
+      "waite_original": ["weariness", "disgust", "aversion", "imaginary vexations", "satiety"]
+    },
+    "reversed": {
+      "keywords": ["重燃熱情", "覺察新機", "走出低潮", "醒覺", "接納"],
+      "summary": "倦怠期過去，重新對眼前事物敞開。",
+      "meaning": "從低潮中醒來；終於看見一直存在的禮物。事業重新對工作感到興趣或接受新挑戰，感情走出低潮重新投入關係，求財看清楚之前忽略的標的。心打開後，世界本來就在那裡。",
+      "waite_original": ["novelty", "presage", "new instruction", "new relations"]
+    }
+  },
+  {
+    "id": 40,
+    "arcana": "minor",
+    "suit": "cups",
+    "name_zh": "聖杯五",
+    "name_en": "Five of Cups",
+    "image": "40.jpg",
+    "upright": {
+      "keywords": ["失落", "悲傷", "後悔", "聚焦失去", "未察留下的"],
+      "summary": "三杯傾倒、兩杯仍立；但目光只盯著倒下的。",
+      "meaning": "象徵失落中的悲傷；忽略了還剩下的東西。事業專案失敗讓你忽略其他可能，感情失戀或被背叛沉浸悲傷，求財投資失利感到絕望。允許自己悲傷，但別忘了背後的兩杯還在。",
+      "waite_original": ["loss", "inheritance not as expected", "marriage with bitterness", "frustration"]
+    },
+    "reversed": {
+      "keywords": ["接受失去", "走出悲傷", "原諒", "重拾希望", "看見剩餘"],
+      "summary": "終於轉身看見背後的兩杯，開始療癒。",
+      "meaning": "悲傷階段走完；視角轉向還擁有的。事業從失敗中提取教訓並重新出發，感情走出舊傷接受新緣，求財承認損失後重新規劃。失去是真的，但不是全部。",
+      "waite_original": ["news", "alliances", "affinity", "consanguinity", "ancestry", "return", "false projects"]
+    }
+  },
+  {
+    "id": 41,
+    "arcana": "minor",
+    "suit": "cups",
+    "name_zh": "聖杯六",
+    "name_en": "Six of Cups",
+    "image": "41.jpg",
+    "upright": {
+      "keywords": ["懷舊", "童年回憶", "純真", "舊識重逢", "甜美回憶"],
+      "summary": "童年般的純真時光，舊朋友或舊情重現。",
+      "meaning": "象徵溫暖的回憶與純真；舊事物以新形式回到生命。事業老同事或前輩帶來新機會，感情有老朋友或舊愛聯絡的契機，求財來自家人或熟識圈的支持。回首是為了確認初心。",
+      "waite_original": ["past and memories", "looking back", "childhood", "happiness from past", "things vanished"]
+    },
+    "reversed": {
+      "keywords": ["執著過去", "離開舊框架", "走出懷舊", "面向未來", "斷捨離"],
+      "summary": "懷舊變成牢籠，需把腳步邁向前。",
+      "meaning": "舊回憶綁住現在的腳步；該前進了。事業困在過去成功模式不肯改變，感情放不下舊情無法接受新緣，求財守舊資產不肯升級。回憶值得珍藏，但不是當下的住處。",
+      "waite_original": ["future", "renewal", "that which will come to pass"]
+    }
+  },
+  {
+    "id": 42,
+    "arcana": "minor",
+    "suit": "cups",
+    "name_zh": "聖杯七",
+    "name_en": "Seven of Cups",
+    "image": "42.jpg",
+    "upright": {
+      "keywords": ["幻想", "選擇過多", "猶豫不決", "想像力", "迷失"],
+      "summary": "雲端七杯各盛異象，繁花迷眼難抉擇。",
+      "meaning": "象徵眾多選擇與幻想交織；分不清現實與虛幻。事業選擇太多反而無法決定，感情同時面對多個對象或幻想對方完美，求財被各種商品或機會迷惑。先把選項寫下、分清楚再說。",
+      "waite_original": ["fairy favours", "images of reflection", "sentiment", "imagination", "things seen in glass of contemplation"]
+    },
+    "reversed": {
+      "keywords": ["收斂選擇", "做出決定", "看清現實", "聚焦", "停止幻想"],
+      "summary": "煙霧散去，回到一杯一個現實的取捨。",
+      "meaning": "從幻想中清醒；做出明確選擇。事業砍掉次要選項聚焦核心，感情明確一個對象不再左顧右盼，求財停止追逐風潮回到本業。少即是多。",
+      "waite_original": ["desire", "will", "determination", "project"]
+    }
+  },
+  {
+    "id": 43,
+    "arcana": "minor",
+    "suit": "cups",
+    "name_zh": "聖杯八",
+    "name_en": "Eight of Cups",
+    "image": "43.jpg",
+    "upright": {
+      "keywords": ["主動離開", "尋找意義", "放棄舒適", "靈性追尋", "轉身"],
+      "summary": "八杯排得整齊但仍轉身離去，去尋找更深的意義。",
+      "meaning": "象徵主動放下表面成就、追尋更深的意義；不是失去而是選擇。事業放棄看似成功的職位去做更有意義的事，感情離開沒有靈魂連結的關係，求財放下不再有熱情的標的。承認不滿足，是改變的開始。",
+      "waite_original": ["joy", "mildness", "timidity", "honour", "modesty"]
+    },
+    "reversed": {
+      "keywords": ["拖延離開", "害怕改變", "回到舒適圈", "恐懼孤獨", "勉強留下"],
+      "summary": "明知該走卻走不開，恐懼綁住雙腳。",
+      "meaning": "知道現狀不對但不敢離開；恐懼勝過追尋。事業不滿意工作但不敢辭、繼續抱怨，感情早就無感卻不忍分手，求財明知標的不行還抱著等。請問自己最害怕什麼？通常那就是答案。",
+      "waite_original": ["great joy", "happiness", "feasting"]
+    }
+  },
+  {
+    "id": 44,
+    "arcana": "minor",
+    "suit": "cups",
+    "name_zh": "聖杯九",
+    "name_en": "Nine of Cups",
+    "image": "44.jpg",
+    "upright": {
+      "keywords": ["願望成真", "滿足", "自我實現", "情感豐足", "犒賞"],
+      "summary": "九杯齊立，許下的願望即將成真。",
+      "meaning": "象徵情感與物質皆豐盛；又稱「許願牌」。事業達成階段性目標、得到應有獎賞，感情關係進入滿足期，求財有意外之財或長線投資結果到位。讓自己享受成就，這是該得的。",
+      "waite_original": ["concord", "contentment", "physical bien-être", "victory", "success", "advantage", "satisfaction"]
+    },
+    "reversed": {
+      "keywords": ["表面滿足", "虛榮", "內在不滿", "願望失準", "享樂後空虛"],
+      "summary": "九杯閃亮但內心仍空，外在滿足無法填補內在。",
+      "meaning": "得到了想要的卻沒想像中快樂；願望本身不對。事業達成目標但發現不是真心想要，感情關係看似完美但缺真實感，求財賺到錢卻空虛。重新檢視自己內在真正渴望什麼。",
+      "waite_original": ["truth", "loyalty", "liberty", "mistakes", "imperfections"]
+    }
+  },
+  {
+    "id": 45,
+    "arcana": "minor",
+    "suit": "cups",
+    "name_zh": "聖杯十",
+    "name_en": "Ten of Cups",
+    "image": "45.jpg",
+    "upright": {
+      "keywords": ["家庭幸福", "情感圓滿", "和睦", "共同願景", "情感歸宿"],
+      "summary": "彩虹下的家，情感最圓滿的時刻。",
+      "meaning": "象徵情感層面的圓滿與家庭和諧；情感歸宿到位。事業團隊像家人般凝聚、共同願景達成，感情家庭關係溫暖和諧、有結婚或生子的徵兆，求財與家人共享資源、共同成長。珍惜當下的幸福。",
+      "waite_original": ["contentment", "repose of entire heart", "perfection of state", "town", "village", "country inhabited by Querent"]
+    },
+    "reversed": {
+      "keywords": ["家庭不和", "情感破裂", "理想破滅", "缺乏歸屬", "價值衝突"],
+      "summary": "彩虹消散，家中卻起風暴，需修補基底。",
+      "meaning": "外表幸福下藏著裂痕；情感歸宿不穩。事業團隊看似和睦但暗藏分歧，感情家庭關係表面平和實則疏離，求財與家人對金錢觀念分歧。誠實對話比假裝幸福更重要。",
+      "waite_original": ["repose of false heart", "indignation", "violence"]
+    }
+  },
+  {
+    "id": 46,
+    "arcana": "minor",
+    "suit": "cups",
+    "name_zh": "聖杯侍者",
+    "name_en": "Page of Cups",
+    "image": "46.jpg",
+    "upright": {
+      "keywords": ["敏感", "創意萌芽", "情感訊息", "天真爛漫", "好消息"],
+      "summary": "杯中蹦出小魚，想像力與感情訊息同至。",
+      "meaning": "象徵新興的情感或創作能量；訊息夾帶溫柔的驚喜。事業有創意專案邀約或新人帶來新鮮空氣，感情收到告白或關係新進展，求財有創作或藝術相關的小財。保持柔軟與好奇。",
+      "waite_original": ["fair young man", "studious youth", "news", "message", "application", "reflection", "meditation"]
+    },
+    "reversed": {
+      "keywords": ["情緒化", "幼稚", "壞消息", "創意受挫", "玻璃心"],
+      "summary": "敏感變成過度情緒，或收到不好的消息。",
+      "meaning": "情感能量發育不全；玻璃心被打碎。事業面對批評過度情緒化、失誤連連，感情陷入幼稚的猜疑或被欺騙，求財創作或副業失利。情緒先放下，再回頭看事情。",
+      "waite_original": ["taste", "inclination", "attachment", "seduction", "deception", "artifice"]
+    }
+  },
+  {
+    "id": 47,
+    "arcana": "minor",
+    "suit": "cups",
+    "name_zh": "聖杯騎士",
+    "name_en": "Knight of Cups",
+    "image": "47.jpg",
+    "upright": {
+      "keywords": ["浪漫", "理想主義", "提案", "情感邀約", "藝術氣質"],
+      "summary": "騎士捧杯而來，帶著浪漫的提議。",
+      "meaning": "象徵理想主義與情感的邀請；溫柔而堅定的追求。事業有富情感色彩的合作邀約或創意提案，感情遇浪漫對象或自己主動表白，求財有藝術、心靈相關的副業機會。理想先行，但別忘了腳要踏地。",
+      "waite_original": ["arrival", "approach", "messenger", "advances", "proposition", "demeanour", "invitation", "incitement"]
+    },
+    "reversed": {
+      "keywords": ["善變", "情感欺瞞", "虛幻承諾", "脫離現實", "理想破滅"],
+      "summary": "提杯的騎士其實心口不一，承諾如水流走。",
+      "meaning": "浪漫變成虛幻；提案經不起檢驗。事業有人提出聽起來很美的合作但細節漏洞百出，感情提防花言巧語的對象，求財有人推薦看起來太美好的標的。要求對方拿出具體承諾。",
+      "waite_original": ["trickery", "artifice", "subtlety", "swindling", "duplicity", "fraud"]
+    }
+  },
+  {
+    "id": 48,
+    "arcana": "minor",
+    "suit": "cups",
+    "name_zh": "聖杯皇后",
+    "name_en": "Queen of Cups",
+    "image": "48.jpg",
+    "upright": {
+      "keywords": ["共情", "直覺敏銳", "溫柔智慧", "情感成熟", "療癒者"],
+      "summary": "海邊持杯的皇后，以溫柔承接他人情感。",
+      "meaning": "象徵情感成熟與深度共情；不只感受還能療癒他人。事業適合擔任諮詢、輔導角色或處理人際協調，感情中扮演穩定情緒提供者的角色，求財心靈相關產業有發展。但要記得也照顧自己的杯子。",
+      "waite_original": ["good fair woman", "honest", "devoted", "loving intelligence", "vision", "success", "happiness", "wisdom", "virtue", "perfect spouse", "good mother"]
+    },
+    "reversed": {
+      "keywords": ["情感過載", "邊界不明", "共依存", "情緒勒索", "自我犧牲"],
+      "summary": "杯子滿溢以致無法分辨自己與他人。",
+      "meaning": "共情過度變成共依存；邊界模糊。事業背負太多別人的情緒、過度幫忙反耗能，感情過度為對方付出失去自我，求財為情花錢不智。設邊界不是冷漠，是健康。",
+      "waite_original": ["distinguished woman not to be trusted", "perverse woman", "vice", "dishonour", "depravity"]
+    }
+  },
+  {
+    "id": 49,
+    "arcana": "minor",
+    "suit": "cups",
+    "name_zh": "聖杯國王",
+    "name_en": "King of Cups",
+    "image": "49.jpg",
+    "upright": {
+      "keywords": ["情感掌舵", "智慧仁慈", "外柔內剛", "情緒穩定", "包容"],
+      "summary": "風浪中穩坐王座，情緒如海卻能掌舵。",
+      "meaning": "象徵成熟的情感領導力；風浪再大也能穩住。事業在團隊衝突中扮演調解者、智慧解決爭議，感情中是穩定可依靠的伴侶，求財做投資能不被市場情緒帶走。情商即財商。",
+      "waite_original": ["fair man", "man of business", "law", "divinity", "responsible", "equity", "art and science", "creative intelligence"]
+    },
+    "reversed": {
+      "keywords": ["情緒失控", "操弄", "情緒勒索", "冷漠", "上癮"],
+      "summary": "風浪終於壓過王者，情緒從穩定變成失控。",
+      "meaning": "情感成熟轉為情緒操弄；表面冷靜內心翻騰。事業遇到表裡不一的上司或夥伴，感情被情勒或自己情勒對方，求財被情緒主導決策。誠實面對自己的脆弱，比表現完美更勇敢。",
+      "waite_original": ["dishonest", "double-dealing man", "roguery", "exaction", "injustice", "vice", "scandal", "pillage", "considerable loss"]
+    }
+  },
+  {
+    "id": 50,
+    "arcana": "minor",
+    "suit": "swords",
+    "name_zh": "寶劍王牌",
+    "name_en": "Ace of Swords",
+    "image": "50.jpg",
+    "upright": {
+      "keywords": ["清晰思路", "突破", "新觀點", "真相浮現", "決斷"],
+      "summary": "出鞘的劍劈開迷霧，思路前所未有的清晰。",
+      "meaning": "象徵理智的銳利突破；混亂中找到關鍵答案。事業遇到關鍵點子或勝出的策略，感情敢於說真話、誤會澄清，求財看清長期被忽略的事實。果斷是現在的美德。",
+      "waite_original": ["triumph", "excessive degree in everything", "conquest", "triumph of force", "great force"]
+    },
+    "reversed": {
+      "keywords": ["思考混亂", "判斷失準", "言詞傷人", "強詞奪理", "誤解擴大"],
+      "summary": "劍揮錯方向，理智被情緒牽著走。",
+      "meaning": "判斷被情緒污染；言語反成傷害。事業決策被偏見或情緒帶偏，感情爭執中說出傷人之語，求財被情緒主導追高殺低。先讓劍入鞘冷靜，再說話。",
+      "waite_original": ["disastrous results", "conception", "childbirth", "augmentation", "multiplicity"]
+    }
+  },
+  {
+    "id": 51,
+    "arcana": "minor",
+    "suit": "swords",
+    "name_zh": "寶劍二",
+    "name_en": "Two of Swords",
+    "image": "51.jpg",
+    "upright": {
+      "keywords": ["僵局", "兩難", "刻意迴避", "暫時平衡", "拖延決定"],
+      "summary": "蒙眼持雙劍，刻意不看以維持脆弱平衡。",
+      "meaning": "象徵被迫的平靜與迴避；不選擇也是一種選擇。事業面對二選一不願決斷、用拖延維持現狀，感情避談重要話題以保持表面和諧，求財不敢做選擇而錯失時機。撕掉眼罩，看清楚再決定。",
+      "waite_original": ["conformity", "equipoise", "courage", "friendship", "concord in arms", "tenderness", "affection", "intimacy"]
+    },
+    "reversed": {
+      "keywords": ["突破僵局", "做出決定", "面對現實", "資訊釋出", "解開封閉"],
+      "summary": "眼罩終於拿下，看清狀況做出選擇。",
+      "meaning": "迴避結束；該面對的攤在桌面。事業終於下決心做出延宕已久的決定，感情坦白溝通解開心結，求財看清資料後決斷布局。再難的決定也勝過繼續逃避。",
+      "waite_original": ["imposture", "falsehood", "duplicity", "disloyalty"]
+    }
+  },
+  {
+    "id": 52,
+    "arcana": "minor",
+    "suit": "swords",
+    "name_zh": "寶劍三",
+    "name_en": "Three of Swords",
+    "image": "52.jpg",
+    "upright": {
+      "keywords": ["心碎", "傷害", "離別", "悲痛", "誠實面對"],
+      "summary": "三劍穿心，痛但讓真相得以呼吸。",
+      "meaning": "象徵明確的痛與失去；雖痛卻是必要的清算。事業遭裁員、被排擠或計畫失敗，感情經歷分手、背叛或重大失望，求財投資受重挫。允許自己痛，淚是癒合的開始。",
+      "waite_original": ["removal", "absence", "delay", "division", "rupture", "dispersion"]
+    },
+    "reversed": {
+      "keywords": ["走出傷痛", "癒合", "釋懷", "原諒", "情緒釋放"],
+      "summary": "拔出心中的劍，傷口開始結痂。",
+      "meaning": "從深層的痛中走出；雖留疤但能繼續。事業從失敗中學到關鍵經驗、重新出發，感情走出失戀、原諒舊傷，求財承認虧損後重新規劃。傷痛沒消失，但你比以前強。",
+      "waite_original": ["mental alienation", "error", "loss", "distraction", "disorder", "confusion"]
+    }
+  },
+  {
+    "id": 53,
+    "arcana": "minor",
+    "suit": "swords",
+    "name_zh": "寶劍四",
+    "name_en": "Four of Swords",
+    "image": "53.jpg",
+    "upright": {
+      "keywords": ["休息", "靜養", "暫停", "整合", "充電"],
+      "summary": "騎士躺臥靜養，戰場暫離給自己時間。",
+      "meaning": "象徵主動的暫停與整合；體力與心力都需要修復。事業需要請假、放假或暫停一個專案養精蓄銳，感情需要獨處空間整理感受，求財暫時不操作、靜觀其變。休息是為了走更遠。",
+      "waite_original": ["vigilance", "retreat", "solitude", "hermit's repose", "exile", "tomb", "coffin"]
+    },
+    "reversed": {
+      "keywords": ["勉強重啟", "休息不足", "倦怠累積", "焦慮復發", "強撐"],
+      "summary": "未癒就上戰場，倦怠與焦慮會加倍反撲。",
+      "meaning": "該休的時候沒休；強撐讓問題更大。事業沒充分恢復就接新案、效率反而下降，感情未療癒舊傷就投入新關係，求財急著扳回損失反加碼出錯。停下來，慢即是快。",
+      "waite_original": ["wise administration", "circumspection", "economy", "avarice", "precaution", "testament"]
+    }
+  },
+  {
+    "id": 54,
+    "arcana": "minor",
+    "suit": "swords",
+    "name_zh": "寶劍五",
+    "name_en": "Five of Swords",
+    "image": "54.jpg",
+    "upright": {
+      "keywords": ["勝得不光彩", "衝突", "羞辱", "兩敗俱傷", "代價"],
+      "summary": "勝者得三劍但對手已離去，贏了卻失了人。",
+      "meaning": "象徵帶刺的勝利；贏了但失去更多。事業職場鬥爭勝出但失去同事人心，感情爭吵贏了道理輸了關係，求財擊敗對手卻被市場標記。問自己：值得嗎？",
+      "waite_original": ["degradation", "destruction", "revocation", "infamy", "dishonour", "loss"]
+    },
+    "reversed": {
+      "keywords": ["和解", "放下勝負", "重建關係", "學會妥協", "後悔反省"],
+      "summary": "意識到勝負無意義，伸手放下武器。",
+      "meaning": "從勝負執著中清醒；認真修補關係。事業放下辦公室政治、回歸合作，感情先道歉化解爭執、重建關係，求財停止與市場為敵、順流操作。放下劍才能再握手。",
+      "waite_original": ["burial", "obsequies", "lesser degree of misery"]
+    }
+  },
+  {
+    "id": 55,
+    "arcana": "minor",
+    "suit": "swords",
+    "name_zh": "寶劍六",
+    "name_en": "Six of Swords",
+    "image": "55.jpg",
+    "upright": {
+      "keywords": ["過渡", "脫離困境", "啟程", "緩慢改善", "前往平靜"],
+      "summary": "渡船離岸往對岸去，往平靜處緩緩前進。",
+      "meaning": "象徵從困境緩慢移轉到平和；不是飛奔而是航行。事業從動盪期過渡到穩定階段、轉換團隊或職位，感情走出衝突期關係趨於緩和，求財損失止血、進入恢復期。慢慢來，方向對就好。",
+      "waite_original": ["journey by water", "route", "way", "envoy", "commissionary", "expedient"]
+    },
+    "reversed": {
+      "keywords": ["原地踏步", "拒絕離開", "卡關", "包袱沉重", "未完成的旅程"],
+      "summary": "船未啟航或半途靠岸，舊問題仍如影隨形。",
+      "meaning": "想離開但離不開；舊包袱拖住前行。事業想轉換但機會未到或自己卻步，感情明知該走但放不下，求財想出場但成本太高。先放下幾件行李，船才浮得起來。",
+      "waite_original": ["declaration", "confession", "publicity", "proposal of love"]
+    }
+  },
+  {
+    "id": 56,
+    "arcana": "minor",
+    "suit": "swords",
+    "name_zh": "寶劍七",
+    "name_en": "Seven of Swords",
+    "image": "56.jpg",
+    "upright": {
+      "keywords": ["策略", "迂迴", "暗中行動", "投機", "智取"],
+      "summary": "懷抱數劍悄悄離開，用策略勝過正面交鋒。",
+      "meaning": "象徵迂迴策略與不正面交鋒；可能是智取也可能是欺騙。事業用策略而非硬拚解決問題，感情中察覺對方有事瞞著或自己有所保留，求財需更精明的策略。記得：策略 vs 詐騙的界線在你的良心。",
+      "waite_original": ["design", "attempt", "wish", "hope", "confidence", "quarrelling", "plan that may fail", "annoyance"]
+    },
+    "reversed": {
+      "keywords": ["欺瞞被揭穿", "良心發現", "歸還", "認錯", "誠實面對"],
+      "summary": "藏的東西露出，是時候誠實或道歉。",
+      "meaning": "策略走偏被識破；該誠實面對。事業遮掩的失誤被發現需主動坦承，感情瞞著的事被揭開、需道歉與重建信任，求財投機操作被市場逆襲。承認比繼續演下去輕鬆。",
+      "waite_original": ["good advice", "counsel", "instruction", "slander", "babbling"]
+    }
+  },
+  {
+    "id": 57,
+    "arcana": "minor",
+    "suit": "swords",
+    "name_zh": "寶劍八",
+    "name_en": "Eight of Swords",
+    "image": "57.jpg",
+    "upright": {
+      "keywords": ["自我設限", "受困感", "恐懼", "受害者意識", "盲目"],
+      "summary": "蒙眼被劍環繞，但其實鬆綁就能走。",
+      "meaning": "象徵自己造的牢籠；困境多是心理而非物理。事業覺得卡住但其實有出路只是不敢看，感情中覺得無解但是自己沒主動溝通，求財覺得套牢但其實可以停損。撕掉眼罩，地不是封死的。",
+      "waite_original": ["bad news", "violent chagrin", "crisis", "censure", "power in trammels", "conflict", "calumny", "sickness"]
+    },
+    "reversed": {
+      "keywords": ["掙脫束縛", "看清出路", "主動行動", "釋放", "解除自我限制"],
+      "summary": "撕掉眼罩、自己鬆綁，自由原本就在。",
+      "meaning": "從心理牢籠中自由；發現門其實沒鎖。事業主動爭取資源、發現原來可以這樣做，感情勇敢溝通並做出選擇，求財停損出場或主動調整部位。出路一直在，差在敢不敢動。",
+      "waite_original": ["disquiet", "difficulty", "opposition", "accident", "treachery", "what is unforeseen", "fatality"]
+    }
+  },
+  {
+    "id": 58,
+    "arcana": "minor",
+    "suit": "swords",
+    "name_zh": "寶劍九",
+    "name_en": "Nine of Swords",
+    "image": "58.jpg",
+    "upright": {
+      "keywords": ["焦慮", "失眠", "夢魘", "過度擔心", "自我折磨"],
+      "summary": "深夜獨坐九劍懸頂，多半是想像而非真實。",
+      "meaning": "象徵深夜的恐懼與焦慮放大；多數憂慮並未發生。事業擔心被裁員、做不好的焦慮纏身，感情害怕被拋棄陷入內耗，求財財務焦慮影響睡眠。多數擔憂是想像，把它寫下來會發現很多並不真實。",
+      "waite_original": ["death", "failure", "miscarriage", "delay", "deception", "disappointment", "despair"]
+    },
+    "reversed": {
+      "keywords": ["走出焦慮", "希望浮現", "尋求協助", "面對恐懼", "天亮"],
+      "summary": "黑夜將盡，恐懼開始顯出虛幻本質。",
+      "meaning": "從焦慮深淵慢慢走出；陽光透進來。事業面對擔心的事其實沒想像可怕、開始行動，感情勇敢溝通發現對方並未要離開，求財正視財務並逐步處理。求助不是軟弱，是聰明。",
+      "waite_original": ["imprisonment", "suspicion", "doubt", "reasonable fear", "shame"]
+    }
+  },
+  {
+    "id": 59,
+    "arcana": "minor",
+    "suit": "swords",
+    "name_zh": "寶劍十",
+    "name_en": "Ten of Swords",
+    "image": "59.jpg",
+    "upright": {
+      "keywords": ["徹底結束", "觸底", "戲劇性失敗", "終結", "無法更糟"],
+      "summary": "十劍穿背，徹底完結；但已是最低點。",
+      "meaning": "象徵痛快的徹底結束；觸底反彈的前夜。事業專案徹底失敗或職位被終結，感情關係明確走到終點，求財投資清算或徹底虧損。已經到底了，下一步只有起來。",
+      "waite_original": ["pain", "affliction", "tears", "sadness", "desolation"]
+    },
+    "reversed": {
+      "keywords": ["重生", "回升", "走出谷底", "度過難關", "新機會"],
+      "summary": "從十劍中爬起，最壞已經過去。",
+      "meaning": "觸底之後的反彈；舊事終結讓新事得以開始。事業從失敗中站起、新機會浮現，感情走出舊傷迎來新關係，求財虧損結束、重建部位。能寫下這段故事就是已經活下來。",
+      "waite_original": ["advantage", "profit", "success", "favour", "power", "authority"]
+    }
+  },
+  {
+    "id": 60,
+    "arcana": "minor",
+    "suit": "swords",
+    "name_zh": "寶劍侍者",
+    "name_en": "Page of Swords",
+    "image": "60.jpg",
+    "upright": {
+      "keywords": ["好奇心", "觀察力", "新觀點", "情報蒐集", "機智"],
+      "summary": "持劍少年警覺四顧，學習新知與蒐集情報。",
+      "meaning": "象徵新觀點與情報能量；好奇心驅動學習。事業適合學習新技術、研究市場或當分析者，感情中欣賞對方的智慧或自己以理智引人，求財做功課的時期、不急著買。觀察先於行動。",
+      "waite_original": ["authority", "overseeing", "secret service", "vigilance", "spying", "examination"]
+    },
+    "reversed": {
+      "keywords": ["八卦", "嘴上功夫", "計謀", "言而無信", "傳遞壞消息"],
+      "summary": "情報變成八卦，言詞犀利但不負責。",
+      "meaning": "好奇變成偷窺；觀察變成評論。事業有人傳閒話或自己誤入八卦圈，感情遇到只會嘴砲不行動的對象，求財被假消息誤導。少說多做、保持資訊潔癖。",
+      "waite_original": ["evil side of qualities", "what is unforeseen", "unprepared state", "sickness"]
+    }
+  },
+  {
+    "id": 61,
+    "arcana": "minor",
+    "suit": "swords",
+    "name_zh": "寶劍騎士",
+    "name_en": "Knight of Swords",
+    "image": "61.jpg",
+    "upright": {
+      "keywords": ["果斷行動", "捍衛理念", "急速推進", "理性勇氣", "說到做到"],
+      "summary": "白馬騎士持劍疾馳，理念堅定立刻行動。",
+      "meaning": "象徵理智驅動的快速行動；想清楚就衝。事業有重大決策後雷厲風行的執行力、推案如風，感情中果斷表白或斷然分手，求財做完功課後快速進場。動作要快但別忘記煞車。",
+      "waite_original": ["skill", "bravery", "capacity", "defence", "address", "enmity", "wrath", "war", "destruction", "opposition", "resistance", "ruin"]
+    },
+    "reversed": {
+      "keywords": ["衝動魯莽", "言語暴力", "缺乏耐心", "好勇鬥狠", "失控"],
+      "summary": "急速演變成失控，劍揮太快傷及無辜。",
+      "meaning": "果決變莽撞；說話像砍人。事業衝動決策後果嚴重，感情爭吵時口無遮攔造成永久傷害，求財急進失準。學會在按按鈕前數三秒。",
+      "waite_original": ["imprudence", "incapacity", "extravagance"]
+    }
+  },
+  {
+    "id": 62,
+    "arcana": "minor",
+    "suit": "swords",
+    "name_zh": "寶劍皇后",
+    "name_en": "Queen of Swords",
+    "image": "62.jpg",
+    "upright": {
+      "keywords": ["客觀理智", "獨立", "明辨是非", "歷練後智慧", "公正"],
+      "summary": "歷經滄桑後的清明，不被情感蒙蔽。",
+      "meaning": "象徵歷練磨出的理智與獨立；不再被表象迷惑。事業擔任客觀分析者或仲裁角色、被信任做關鍵決策，感情中保持獨立人格不依附他人，求財以理智判斷而非情緒。冷靜不是冷漠，是成熟。",
+      "waite_original": ["widowhood", "female sadness", "embarrassment", "absence", "sterility", "mourning", "privation", "separation"]
+    },
+    "reversed": {
+      "keywords": ["尖酸刻薄", "過度批判", "冷漠", "報復心", "封閉"],
+      "summary": "理智變鋒利、清明變冷酷，需重新柔軟。",
+      "meaning": "理智變利刃傷人；歷練變成戒心。事業批判過度、難以合作，感情防衛心過強推開所有人，求財只看數字不看人情。保留鋒芒但記得也要溫度。",
+      "waite_original": ["malice", "bigotry", "artifice", "prudery", "bale", "deceit"]
+    }
+  },
+  {
+    "id": 63,
+    "arcana": "minor",
+    "suit": "swords",
+    "name_zh": "寶劍國王",
+    "name_en": "King of Swords",
+    "image": "63.jpg",
+    "upright": {
+      "keywords": ["理性領導", "權威判斷", "公正", "戰略思維", "言出必行"],
+      "summary": "王者持劍正坐，以理智與權威主導局面。",
+      "meaning": "象徵成熟的理性領導；不被情緒左右的決策。事業是企劃、法律、管理層的權威角色，感情中扮演理性溝通與堅定承諾的對象，求財做戰略性長線投資。權威來自誠信與紀律。",
+      "waite_original": ["judgment", "power", "command", "authority", "militant intelligence", "law", "offices of crown"]
+    },
+    "reversed": {
+      "keywords": ["獨裁", "理性過頭", "操弄", "冷血決策", "濫權"],
+      "summary": "理性扭曲為冷血，權威墮為濫用。",
+      "meaning": "理智過頭變冷血；權威用偏方向。事業遇到專制或操弄型上司、自己也須警覺權力使用方式，感情中以理壓人不容情感，求財只追逐效率忽略道德。權力是工具不是目的。",
+      "waite_original": ["cruelty", "perversity", "barbarity", "perfidy", "evil intention"]
+    }
+  },
+  {
+    "id": 64,
+    "arcana": "minor",
+    "suit": "pentacles",
+    "name_zh": "錢幣王牌",
+    "name_en": "Ace of Pentacles",
+    "image": "64.jpg",
+    "upright": {
+      "keywords": ["新財富機會", "種下種子", "穩固基礎", "實質開始", "繁榮"],
+      "summary": "金幣降臨手中，物質與機會的新起點。",
+      "meaning": "象徵物質層面的新機會；最實在的牌之一。事業有加薪、新工作或創業實質起步，感情關係進入穩定共同生活的階段，求財有具體新財源或長線投資啟動。動手做、把種子種下。",
+      "waite_original": ["perfect contentment", "felicity", "ecstasy", "speedy intelligence", "gold"]
+    },
+    "reversed": {
+      "keywords": ["錯失機會", "投資失算", "貪心", "起步延後", "物質焦慮"],
+      "summary": "金幣未握牢就失落，或誤判機會性質。",
+      "meaning": "新機會看起來好但不適合；或貪心讓你錯失。事業新工作條件看似誘人但有陷阱，感情共同生活的時機未成熟，求財新標的暗藏風險或自己貪多。先確認基礎再下注。",
+      "waite_original": ["evil side of wealth", "bad intelligence", "great riches"]
+    }
+  },
+  {
+    "id": 65,
+    "arcana": "minor",
+    "suit": "pentacles",
+    "name_zh": "錢幣二",
+    "name_en": "Two of Pentacles",
+    "image": "65.jpg",
+    "upright": {
+      "keywords": ["平衡多重事物", "彈性應對", "兼顧", "資源調配", "靈活"],
+      "summary": "雜耍兩枚錢幣，多頭並進但保持節奏。",
+      "meaning": "象徵多事並進需要的平衡感；忙但不亂。事業同時處理多個專案、需精準排程，感情兼顧多角色（家庭、工作、自己）需互相妥協，求財多元配置、不孤注一擲。節奏感是關鍵。",
+      "waite_original": ["gaiety", "recreation", "news", "messages in writing", "obstacles", "agitation", "trouble", "embroilment"]
+    },
+    "reversed": {
+      "keywords": ["失衡", "分身乏術", "顧此失彼", "勉強支撐", "倦怠"],
+      "summary": "拋接失敗錢幣落地，同時做太多事而失衡。",
+      "meaning": "兼顧太多事終於失控；該放下幾顆球。事業多工拖累所有專案品質，感情角色衝突讓某一面崩潰，求財分散到失焦反不獲利。優先順序重新排，砍掉不重要的。",
+      "waite_original": ["enforced gaiety", "simulated enjoyment", "literal sense", "handwriting", "letters of exchange"]
+    }
+  },
+  {
+    "id": 66,
+    "arcana": "minor",
+    "suit": "pentacles",
+    "name_zh": "錢幣三",
+    "name_en": "Three of Pentacles",
+    "image": "66.jpg",
+    "upright": {
+      "keywords": ["團隊合作", "專業認可", "工匠精神", "扎實成果", "互補長才"],
+      "summary": "石匠、僧侶與設計者合作，各盡其才造大業。",
+      "meaning": "象徵團隊各司其職的合作；專業互相加乘。事業團隊合作初見成效、被專業圈認可，感情中與伴侶在共同目標上互補合作，求財與專業夥伴合作的長線投資。承認自己不全能，是成熟。",
+      "waite_original": ["métier", "trade", "skilled labour", "nobility", "aristocracy", "renown", "glory"]
+    },
+    "reversed": {
+      "keywords": ["合作不順", "品質瑕疵", "缺乏專業", "敷衍", "團隊摩擦"],
+      "summary": "工匠之手停下，合作出現裂痕或品質下降。",
+      "meaning": "團隊合作走味；專業不到位。事業團隊互不信任、專業不足影響交付，感情共同目標不一致或執行能力差，求財與不對的人合作虧損。回到專業基本功。",
+      "waite_original": ["mediocrity", "puerility", "pettiness", "weakness"]
+    }
+  },
+  {
+    "id": 67,
+    "arcana": "minor",
+    "suit": "pentacles",
+    "name_zh": "錢幣四",
+    "name_en": "Four of Pentacles",
+    "image": "67.jpg",
+    "upright": {
+      "keywords": ["守財", "穩固持有", "保守", "安全感", "握緊"],
+      "summary": "緊抱四枚錢幣，安全感重於一切。",
+      "meaning": "象徵守住既有的物質與資源；保守為主。事業守成、不冒險擴張，感情關係穩固但缺乏新鮮感，求財全進保守標的、零風險導向。安全感重要，但握得太緊也會窒息。",
+      "waite_original": ["surety of possessions", "cleaving to that which one has", "gift", "legacy", "inheritance"]
+    },
+    "reversed": {
+      "keywords": ["放下控制", "鬆綁", "願意給予", "重新流動", "脫離吝嗇"],
+      "summary": "鬆開緊握的手，財富與愛才能流動。",
+      "meaning": "從囤積中釋放；資源開始流動。事業願意分享資源、合作開展新局，感情放下控制讓對方喘息，求財適度配置成長型標的。流動的水才不會發臭。",
+      "waite_original": ["suspense", "delay", "opposition"]
+    }
+  },
+  {
+    "id": 68,
+    "arcana": "minor",
+    "suit": "pentacles",
+    "name_zh": "錢幣五",
+    "name_en": "Five of Pentacles",
+    "image": "68.jpg",
+    "upright": {
+      "keywords": ["經濟困境", "孤立感", "失落", "需求協助", "雪中需暖"],
+      "summary": "雪中徘徊看不見窗內燈光，但燈光其實在。",
+      "meaning": "象徵物質與情感雙失落；其實援助就在身邊。事業財務或職涯遇困頓、覺得孤立無援，感情中覺得不被看見或關係冷淡，求財現金流緊張、有失業之虞。求助不丟臉，回頭看，門裡有光。",
+      "waite_original": ["material trouble", "destitution", "love and lovers", "wife", "husband", "concordance", "affinities"]
+    },
+    "reversed": {
+      "keywords": ["走出困境", "接受幫助", "經濟回穩", "找到出路", "敞開心房"],
+      "summary": "終於敲門進入有光的房間，困境鬆動。",
+      "meaning": "從匱乏走出；資源開始重新流入。事業開始有新機會或得到貴人援助，感情走出冷淡迎來溫暖支持，求財度過低點、現金流恢復。承認需要幫助，是強壯的開始。",
+      "waite_original": ["disorder", "chaos", "ruin", "discord", "profligacy"]
+    }
+  },
+  {
+    "id": 69,
+    "arcana": "minor",
+    "suit": "pentacles",
+    "name_zh": "錢幣六",
+    "name_en": "Six of Pentacles",
+    "image": "69.jpg",
+    "upright": {
+      "keywords": ["慷慨", "施與受平衡", "公平分配", "援助", "合理回報"],
+      "summary": "天平兩端施捨平衡，付出與收受各得其所。",
+      "meaning": "象徵物質流動的公平與慷慨；該給的給、該拿的拿。事業團隊內資源分配公平、貢獻有合理回報，感情關係中付出與收受平衡，求財透過給予建立長線回報。施與受是同一回事。",
+      "waite_original": ["presents", "gifts", "gratification", "attention", "vigilance", "present prosperity"]
+    },
+    "reversed": {
+      "keywords": ["施捨不均", "受困施恩", "債務", "權力不對等", "利用"],
+      "summary": "天平傾斜，給予變成控制或施恩變債。",
+      "meaning": "慷慨變不對等的權力遊戲；施恩附帶條件。事業恩給型上司讓人喘不過氣或自己用施惠操控他人，感情中誰付得多誰權力大，求財欠人情或利用他人。先平衡天平。",
+      "waite_original": ["desire", "cupidity", "envy", "jealousy", "illusion"]
+    }
+  },
+  {
+    "id": 70,
+    "arcana": "minor",
+    "suit": "pentacles",
+    "name_zh": "錢幣七",
+    "name_en": "Seven of Pentacles",
+    "image": "70.jpg",
+    "upright": {
+      "keywords": ["長線等待", "評估成果", "耐心收成", "中間檢視", "投資視角"],
+      "summary": "農夫倚鋤評估作物，長線耕耘現出成形。",
+      "meaning": "象徵長線投入後的中段檢視；耐心等待收成。事業專案進展中需停下評估方向，感情長線經營到階段性檢視，求財長期投資看到成形但未到收割期。耐住性子，再灌溉一次。",
+      "waite_original": ["money", "business", "barter", "altercation", "quarrels", "innocence", "ingenuity", "purgation"]
+    },
+    "reversed": {
+      "keywords": ["投入未果", "急著收割", "策略失算", "耐心耗盡", "虧損反思"],
+      "summary": "果實未成熟就採收，或長線投入沒回報。",
+      "meaning": "急著收成反不利；長線投入需重新檢視。事業專案投入太久未見成效需考慮轉向，感情長期經營未獲對等回應，求財長線標的不如預期。學會停損，也是智慧。",
+      "waite_original": ["cause for anxiety regarding money"]
+    }
+  },
+  {
+    "id": 71,
+    "arcana": "minor",
+    "suit": "pentacles",
+    "name_zh": "錢幣八",
+    "name_en": "Eight of Pentacles",
+    "image": "71.jpg",
+    "upright": {
+      "keywords": ["勤學", "工匠精神", "練功", "專注磨技", "踏實累積"],
+      "summary": "專注雕琢每枚錢幣，技藝在重複中精進。",
+      "meaning": "象徵踏實的學習與磨練；用時間換深度。事業投入專業進修、刻意練習提升技藝，感情中願意花時間理解對方、慢工細活地經營，求財透過學習提升理財能力。穩扎穩打才是長久之計。",
+      "waite_original": ["work", "employment", "commission", "craftsmanship", "skill in craft and business", "preparatory stage"]
+    },
+    "reversed": {
+      "keywords": ["敷衍", "缺乏專注", "技不如人", "急功近利", "粗製濫造"],
+      "summary": "工匠分心，作品變成次品而非精品。",
+      "meaning": "練功不到家或心不在焉；急著出成果。事業缺乏專注、產出品質下降，感情敷衍以對導致關係退步，求財不做功課就投資。回頭老實磨基本功。",
+      "waite_original": ["voided ambition", "vanity", "cupidity", "exaction", "usury", "cunning", "intrigue"]
+    }
+  },
+  {
+    "id": 72,
+    "arcana": "minor",
+    "suit": "pentacles",
+    "name_zh": "錢幣九",
+    "name_en": "Nine of Pentacles",
+    "image": "72.jpg",
+    "upright": {
+      "keywords": ["獨立富足", "自我犒賞", "成熟收成", "品味生活", "自給自足"],
+      "summary": "莊園內悠然獨立，靠自身努力得來的富足。",
+      "meaning": "象徵獨立達成的物質豐足；不靠他人也能精彩。事業憑自己能力贏得地位與資源，感情有獨立人格不依附於誰、自我完整，求財個人投資長線豐收、不需共同帳戶。享受獨立帶來的尊嚴。",
+      "waite_original": ["prudence", "safety", "success", "accomplishment", "certitude", "discernment"]
+    },
+    "reversed": {
+      "keywords": ["過度依賴", "虛榮", "孤立", "享樂錯置", "華而不實"],
+      "summary": "獨立變孤立，富足變虛榮，需找回真實。",
+      "meaning": "獨立過頭成孤立；外表富足內心空虛。事業表面成就掩蓋人脈空洞，感情自我中心推開親近的人，求財為炫耀而花的錢沒帶來真正快樂。檢視獨立 vs 孤立的差異。",
+      "waite_original": ["roguery", "deception", "voided project", "bad faith"]
+    }
+  },
+  {
+    "id": 73,
+    "arcana": "minor",
+    "suit": "pentacles",
+    "name_zh": "錢幣十",
+    "name_en": "Ten of Pentacles",
+    "image": "73.jpg",
+    "upright": {
+      "keywords": ["家族傳承", "財富累積", "穩固結構", "世代", "安居"],
+      "summary": "三代同堂於庭院，財富與情感同根延續。",
+      "meaning": "象徵物質豐盛達於家族層級；長線累積到位。事業家族企業或長期經營進入穩定收成期，感情關係進入家庭共同生活與傳承階段，求財累積資產到可考慮繼承或大型布局。長線思維最終勝。",
+      "waite_original": ["gain", "riches", "family matters", "archives", "extraction", "abode of family"]
+    },
+    "reversed": {
+      "keywords": ["家族紛爭", "繼承糾紛", "結構不穩", "世代衝突", "投機破產"],
+      "summary": "家族表面富足內藏衝突，需修補基底。",
+      "meaning": "豐盛被內鬥蛀空；繼承或共同資源出現裂痕。事業家族或長期合夥起爭執、利益分配引發衝突，感情家族問題影響當下關係，求財遺產或共同帳戶引發紛爭。錢可以重來，家難重建。",
+      "waite_original": ["chance", "fatality", "loss", "robbery", "games of hazard", "dowry", "pensions"]
+    }
+  },
+  {
+    "id": 74,
+    "arcana": "minor",
+    "suit": "pentacles",
+    "name_zh": "錢幣侍者",
+    "name_en": "Page of Pentacles",
+    "image": "74.jpg",
+    "upright": {
+      "keywords": ["勤學", "新計畫", "踏實啟程", "務實", "好機會降臨"],
+      "summary": "少年雙手捧錢幣端詳，新機會落在掌心。",
+      "meaning": "象徵新興的物質機會與踏實的學習能量；種子已落地。事業有新工作、實習或學習機會，感情遇務實穩重的對象或自己以實際行動展現心意，求財有新財源或開始學理財。一步一腳印。",
+      "waite_original": ["application", "study", "scholarship", "reflection", "news", "messages", "rule", "management"]
+    },
+    "reversed": {
+      "keywords": ["缺乏行動力", "懶散", "計畫流產", "壞消息", "短視"],
+      "summary": "錢幣捧著卻不前進，機會在手中冷掉。",
+      "meaning": "新機會被怠惰浪費；學習或計畫起步無力。事業實習或新工作未認真投入而錯失，感情務實對象因自己懶於經營而流失，求財新財源未開發就半途而廢。動起來才不浪費機會。",
+      "waite_original": ["prodigality", "dissipation", "liberality", "luxury", "unfavourable news"]
+    }
+  },
+  {
+    "id": 75,
+    "arcana": "minor",
+    "suit": "pentacles",
+    "name_zh": "錢幣騎士",
+    "name_en": "Knight of Pentacles",
+    "image": "75.jpg",
+    "upright": {
+      "keywords": ["穩定推進", "可靠", "務實", "耐心", "踏實做事"],
+      "summary": "騎士緩步前行，慢但每步都算數。",
+      "meaning": "象徵穩定可靠的執行力；不快但精準到位。事業是可靠的執行者、按計畫穩步推進，感情中扮演穩定承諾的對象、不浪漫但實在，求財長線定期定額、不衝動進出。慢即是穩，穩即是快。",
+      "waite_original": ["utility", "serviceableness", "interest", "responsibility", "rectitude"]
+    },
+    "reversed": {
+      "keywords": ["過度保守", "停滯", "缺乏進取", "頑固", "錯失時機"],
+      "summary": "騎士停在原地或太保守，世界已往前走。",
+      "meaning": "穩定變停滯；務實變僵化。事業安於既有不接受變革、被新人超越，感情關係穩定但無新鮮感、缺乏成長，求財守舊投資錯過新趨勢。穩定不等於不動，要動起來。",
+      "waite_original": ["inertia", "idleness", "repose", "stagnation", "placidity", "discouragement", "carelessness"]
+    }
+  },
+  {
+    "id": 76,
+    "arcana": "minor",
+    "suit": "pentacles",
+    "name_zh": "錢幣皇后",
+    "name_en": "Queen of Pentacles",
+    "image": "76.jpg",
+    "upright": {
+      "keywords": ["豐盛", "務實母性", "理財有道", "務實智慧", "兼顧家庭事業"],
+      "summary": "皇后於花園中懷抱錢幣，物質與滋養並重。",
+      "meaning": "象徵物質豐足與滋養並行的成熟；女性主管或創業者的典範。事業擔任既能管理又有溫度的角色、業績穩定，感情中扮演照顧者也能獨立賺錢，求財個人理財井井有條、能照顧家庭。實在的女王。",
+      "waite_original": ["opulence", "generosity", "magnificence", "security", "liberty"]
+    },
+    "reversed": {
+      "keywords": ["物質依賴", "過度照顧他人", "金錢焦慮", "工作家庭失衡", "缺乏安全感"],
+      "summary": "豐盛變成依賴或失衡，需重新照顧自己。",
+      "meaning": "母性過度自我犧牲；豐盛感被焦慮取代。事業被家庭或他人需求拖垮工作品質，感情中過度照顧伴侶忽略自己，求財為家人花錢成為焦慮來源。先把自己的杯子倒滿。",
+      "waite_original": ["evil", "suspicion", "suspense", "fear", "mistrust"]
+    }
+  },
+  {
+    "id": 77,
+    "arcana": "minor",
+    "suit": "pentacles",
+    "name_zh": "錢幣國王",
+    "name_en": "King of Pentacles",
+    "image": "77.jpg",
+    "upright": {
+      "keywords": ["事業有成", "財富自由", "穩固實力", "商業頭腦", "厚實的領袖"],
+      "summary": "王者坐擁葡萄藤莊園，物質與權威皆達巔峰。",
+      "meaning": "象徵物質與事業層面的成熟巔峰；最務實的成功。事業擔任產業領袖或企業主、長期累積到位，感情中扮演穩重供給者的伴侶，求財長線財富累積豐厚、可考慮資產配置與傳承。樹大招風，但根深。",
+      "waite_original": ["valour", "realizing intelligence", "business and normal intellectual aptitude", "mathematical gifts", "success"]
+    },
+    "reversed": {
+      "keywords": ["物質至上", "貪婪", "頑固", "腐敗", "權力傲慢"],
+      "summary": "豐盛膨脹為貪婪，根紮太深變成腐朽。",
+      "meaning": "成功變傲慢；穩固變僵化或腐敗。事業遇到只看數字不看人的高管或自己也走偏，感情用錢解決一切忽視情感連結，求財貪心而忽略風險。錢買不到尊重也買不到平靜。",
+      "waite_original": ["vice", "weakness", "ugliness", "perversity", "corruption", "peril"]
+    }
+  }
+]
