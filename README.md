@@ -1,66 +1,112 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 天道 Tiandao
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+以 Laravel 10 打造的 LINE 機器人，提供傳統中華占卜服務。使用者於 LINE 對話中輸入指定關鍵字，即可取得對應的占卜結果。
 
-## About Laravel
+## 功能
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+| 指令 | 服務 | 說明 |
+|------|------|------|
+| `起卦` | I-Ching（QiGua） | 大衍蓍草法模擬，回傳本卦與變卦 |
+| `抽神社籤` | 神社籤（ShengSheQian） | 隨機抽取神社籤詩 |
+| `大樂透號碼` | 大樂透統計（Lottery） | 近 10 期、1／3／5 年、歷史資料的冷熱號分析（民國年） |
+| `蒙地卡羅預測` | 蒙地卡羅（MonteCarlo） | 以蒙地卡羅法推估號碼分佈 |
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+非以上關鍵字會由 `Error` 命令回覆預設訊息。
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 環境需求
 
-## Learning Laravel
+- PHP `^8.1`
+- Laravel `^10.10`
+- Node.js（前端資產建置）
+- LINE Bot SDK `linecorp/line-bot-sdk:^9.5`
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 安裝與啟動
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+```bash
+composer install
+npm install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+php artisan serve
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+於 `.env` 設定資料庫與 LINE 憑證；LINE 相關設定統一收斂於 `config/line.php`（`channel_secret`、`channel_token`）。
 
-## Laravel Sponsors
+前端資產：
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```bash
+npm run dev      # 開發
+npm run build    # 正式
+```
 
-### Premium Partners
+## LINE Webhook 設定
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+於 LINE Developers Console 將 Webhook URL 指向：
 
-## Contributing
+```
+POST https://<your-domain>/api/message
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+該路由由 `LineBotWebHook` middleware 進行簽章驗證，`EventProcessor` 內部會再以 `EventRequestParser` 二次驗證。
 
-## Code of Conduct
+本地 `GET /` 與 `GET /shenshe` 為除錯端點，會直接 `dump()` 一次占卜結果，不走 LINE 流程。
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 架構
 
-## Security Vulnerabilities
+```
+Webhook (POST /api/message)
+        │
+LineCallBackController ──► LineService ──► EventProcessor
+                                                │
+                                          CommandRegistry
+                                                │
+                          (canHandle 比對，無命中則 Error)
+                                                │
+                                          CommandService
+                                                │
+                                       LineClientFactory ──► LINE Reply
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- `app/Http/Controllers/LineCallBackController.php`：webhook 入口
+- `app/Services/LineService.php`：對外服務門面
+- `app/Services/EventProcessor.php`：解析事件、過濾文字訊息、錯誤記錄
+- `app/Services/CommandRegistry.php`：命令註冊與比對
+- `app/Services/CommandService.php`：執行命令並回覆
+- `app/Factories/LineClientFactory.php`：LINE Bot 客戶端工廠（請勿在他處直接 new SDK）
+- `app/KeyWords/`：各占卜命令實作
 
-## License
+### 新增占卜命令
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1. 於 `app/KeyWords/` 新增類別並實作 `Command` 介面：
+   - `canHandle(string $message): bool`
+   - `handle(MessageEvent $event): array`
+   - `getDescription(): string`
+   - `replyCommand(): array`（已棄用，僅供除錯路由使用）
+2. 於 `CommandRegistry::registerDefaultCommands()` 註冊。
+
+## 測試與工具
+
+```bash
+php artisan test                 # 全部測試
+vendor/bin/phpunit tests/Unit    # 單元測試
+vendor/bin/phpunit tests/Feature # 功能測試
+vendor/bin/pint                  # 程式碼格式化
+```
+
+自訂 artisan 指令（離線測試占卜邏輯，不經 LINE）：
+
+```bash
+php artisan lottery      # 測試大樂透統計
+php artisan montecarlo   # 測試蒙地卡羅預測
+```
+
+## 資料來源
+
+- `yiJing/yiJing.json`：易經卦象與卦辭
+- `yiJing/Divination.json`：占卜輔助資料
+- `BigLottery` model：台灣大樂透歷史開獎資料（統計分析用）
+
+## 授權
+
+依 Laravel 框架使用 [MIT License](https://opensource.org/licenses/MIT)。

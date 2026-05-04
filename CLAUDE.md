@@ -28,41 +28,41 @@ This is a Laravel 10 application called "天道" (Tiandao) - a LINE bot that pro
 - `npm run build` - Build assets for production
 
 ### Custom Artisan Commands
-- `php artisan lottery:test` - Test lottery functionality
-- `php artisan monte-carlo:test` - Test Monte Carlo prediction
+- `php artisan lottery` - Test lottery functionality (`app/Console/Commands/LotteryTest.php`)
+- `php artisan montecarlo` - Test Monte Carlo prediction (`app/Console/Commands/MonteCarloTest.php`)
 
 ## Architecture Overview
 
-### LINE Bot Integration
-The application primarily functions as a LINE webhook receiver:
+### Routes
+- `POST /api/message` → `LineCallBackController@index` — LINE webhook entry, guarded by `LineBotWebHook` middleware (signature verification)
+- `GET /` and `GET /shenshe` → `SheShiController` — local debug routes that `dump()` a single divination result; not part of the LINE flow
 
-- **Entry Point**: `LineCallBackController@index` receives webhooks from LINE platform
-- **Message Processing**: `LineService` parses incoming messages and routes to appropriate handlers
-- **Command Pattern**: Each divination service implements the `Command` interface with a `replyCommand()` method
+### LINE Bot Pipeline
+The webhook flow is split across small collaborators rather than a single service:
 
-### Core Services Structure
+1. `LineCallBackController@index` (`app/Http/Controllers/`) delegates to `LineService::webhook()`.
+2. `LineService` hands the request to `EventProcessor::processWebhook()` (`app/Services/EventProcessor.php`), which:
+   - Verifies the LINE signature and parses events via `EventRequestParser`.
+   - Filters to `MessageEvent` + `TextMessageContent`.
+   - Logs and swallows non-text/non-message events instead of erroring.
+3. `EventProcessor` asks `CommandRegistry::findCommand($text)` (`app/Services/CommandRegistry.php`) for the first command whose `canHandle()` matches; falls back to `Error` when nothing matches.
+4. `CommandService::executeCommand()` invokes the command and replies via the LINE bot client built by `LineClientFactory` (`app/Factories/LineClientFactory.php`).
 
-#### KeyWords Directory (`app/KeyWords/`)
-Contains divination command handlers:
-- `QiGua.php` - I-Ching divination using traditional coin-throwing simulation
-- `Lottery.php` - Taiwan Big Lottery number analysis and statistics
-- `MonteCarlo.php` - Monte Carlo prediction methods
-- `ShengSheQian.php` - Temple fortune stick divination
-- `Error.php` - Default error handler for unrecognized commands
+### Command Pattern (`app/KeyWords/`)
+Each divination service implements `Command` (`app/KeyWords/Command.php`):
+- `canHandle(string $message): bool` — keyword match used by `CommandRegistry`
+- `handle(MessageEvent $event): array` — primary entry point
+- `getDescription(): string`
+- `replyCommand(): array` — **deprecated**, kept for `SheShiController` debug routes; new code should call `handle()`
 
-#### Services Directory (`app/Services/`)
-- `LineService.php` - Handles LINE API integration and webhook processing
-- `CommandService.php` - Generic command execution service using dependency injection
+Registered defaults (in `CommandRegistry::registerDefaultCommands()`):
+- `QiGua` — "起卦" — I-Ching divination (coin/yarrow-stalk simulation)
+- `ShengSheQian` — "抽神社籤" — Temple fortune stick
+- `Lottery` — "大樂透號碼" — Taiwan Big Lottery statistics
+- `MonteCarlo` — "蒙地卡羅預測" — Monte Carlo prediction
+- `Error` — default fallback when no command matches (returned by registry, not registered)
 
-### Message Flow
-1. LINE platform sends webhook to `/` route
-2. `LineCallBackController` delegates to `LineService`
-3. `LineService` parses message and matches against command keywords:
-   - "起卦" → QiGua (I-Ching)
-   - "抽神社籤" → ShengSheQian (Temple fortune)
-   - "大樂透號碼" → Lottery (Lottery analysis)
-   - "蒙地卡羅預測" → MonteCarlo (Monte Carlo prediction)
-4. `CommandService` executes the matched command and sends reply via LINE API
+To add a new divination, implement `Command` in `app/KeyWords/` and register it in `CommandRegistry::registerDefaultCommands()`.
 
 ### Data Sources
 - `yiJing/yiJing.json` - I-Ching hexagram interpretations and meanings
@@ -89,6 +89,7 @@ The Lottery class provides statistical analysis across multiple time periods:
 - Uses Taiwan Minguo calendar system (民國年) for date calculations
 
 ### LINE API Integration
-- Uses LINE Bot SDK v9.5 for webhook processing and message sending
-- Supports text message responses with structured fortune-telling content
-- Webhook signature verification for security
+- LINE Bot SDK `linecorp/line-bot-sdk:^9.5` for webhook parsing and message sending
+- Bot client construction is centralized in `LineClientFactory` — do not instantiate the LINE SDK directly elsewhere
+- Webhook signature verification happens in two places: the `LineBotWebHook` middleware on the route, and again inside `EventProcessor` via `EventRequestParser`
+- Credentials come from `config/line.php` (`channel_secret`, `channel_token`)
