@@ -11,6 +11,8 @@
 | `大樂透號碼` | 大樂透統計（Lottery） | 近 10 期、1／3／5 年、歷史資料的冷熱號分析（民國年） |
 | `蒙地卡羅預測` | 蒙地卡羅（MonteCarlo） | 以蒙地卡羅法推估號碼分佈 |
 | `小六壬` / `起小六壬` / `六壬` | 小六壬（XiaoLiuRen） | 依當下農曆月日時推大安/留連/速喜/赤口/小吉/空亡；依傳統「以時宮為主、日宮+時宮雙宮並斷」回三段：時宮（主斷）/日宮（雙宮並斷）/月宮（整體背景），各含五行/方位/神煞/主數/卦辭與事業/愛情/出行/失物/疾病/求財六面向 |
+| `每日塔羅` | 塔羅單牌（Tarot） | 抽 1 張 + 50% 正逆位，回 ImageMessage 牌面圖 + TextMessage 牌意 |
+| `塔羅三牌陣` | 塔羅三牌陣（Tarot） | 抽 3 張不重複 + 各 50% 正逆位，回 FlexCarousel（過去/現在/未來三 bubbles）+ TextMessage 詳細解讀 |
 
 非以上關鍵字會由 `Error` 命令回覆預設訊息。
 
@@ -108,6 +110,9 @@ php artisan montecarlo   # 測試蒙地卡羅預測
 - `yiJing/yiJing.json`：易經卦象與卦辭
 - `yiJing/Divination.json`：占卜輔助資料
 - `data/xiaoLiuRen/palaces.json`：小六壬六宮資料（卦辭 + 六面向解釋）
+- `data/tarot/cards.json`：塔羅 78 張牌庫（含 keywords / summary / meaning / waite_original）
+- `public/img/tarot/`：塔羅牌面圖 78 張（RWS 1909 PD，自 Wikimedia Commons 取得，詳見該目錄 README）
+- `scripts/fetch-tarot-images.sh`：塔羅圖片下載腳本（macOS sips / ImageMagick 自動偵測）
 - `BigLottery` model：台灣大樂透歷史開獎資料（統計分析用）
 
 ## 授權
