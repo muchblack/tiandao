@@ -7,16 +7,13 @@ use App\KeyWords\ShengSheQian;
 
 class SheShiController extends Controller
 {
-    //
     public function index()
     {
-        $qiGua = new QiGua();
-        dump($qiGua->replyCommand());
+        return response()->json((new QiGua())->replyCommand());
     }
 
     public function shengShe()
     {
-        $qiGua = new ShengSheQian();
-        dump($qiGua->replyCommand());
+        return response()->json((new ShengSheQian())->replyCommand());
     }
 }
