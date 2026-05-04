@@ -13,7 +13,15 @@ class XiaoLiuRen implements Command
 {
     private const TIMEZONE = 'Asia/Taipei';
 
-    private const PALACE_LABELS = ['月宮', '日宮', '時宮'];
+    /**
+     * 訊息回覆順序（傳統「以時宮為主，日宮+時宮雙宮並斷」之排法）。
+     * key: cast indices 對應的位置（month=0, day=1, time=2）
+     */
+    private const REPLY_ORDER = [
+        ['cast_pos' => 2, 'label' => '時宮', 'role' => '主斷', 'note' => '小六壬以時宮為主要占斷'],
+        ['cast_pos' => 1, 'label' => '日宮', 'role' => '雙宮並斷', 'note' => '日宮+時宮並讀以加強主斷'],
+        ['cast_pos' => 0, 'label' => '月宮', 'role' => '整體背景', 'note' => '本月整體運勢背景'],
+    ];
 
     public function canHandle(string $message): bool
     {
@@ -27,7 +35,7 @@ class XiaoLiuRen implements Command
 
     public function getDescription(): string
     {
-        return '小六壬占卜 - 依當下農曆月日時推算大安/留連/速喜/赤口/小吉/空亡六宮，回月日時三宮卦意';
+        return '小六壬占卜 - 依當下農曆月日時推算大安/留連/速喜/赤口/小吉/空亡六宮，依時宮主斷、日宮並讀、月宮為背景的傳統排法回覆';
     }
 
     public function replyCommand(): array
@@ -36,10 +44,17 @@ class XiaoLiuRen implements Command
         $cast = $this->cast(new DateTime('now', new DateTimeZone(self::TIMEZONE)));
 
         $messages = [];
-        foreach (self::PALACE_LABELS as $i => $label) {
-            $palace = $palaces[$cast['indices'][$i]];
+        foreach (self::REPLY_ORDER as $entry) {
+            $pos = $entry['cast_pos'];
+            $palace = $palaces[$cast['indices'][$pos]];
             $messages[] = (new TextMessage([
-                'text' => $this->formatPalace($label, $palace, $cast['header'][$i]),
+                'text' => $this->formatPalace(
+                    $entry['label'],
+                    $entry['role'],
+                    $entry['note'],
+                    $palace,
+                    $cast['header'][$pos]
+                ),
             ]))->setType('text');
         }
 
@@ -64,9 +79,9 @@ class XiaoLiuRen implements Command
         return [
             'indices' => [$monthPalace, $dayPalace, $timePalace],
             'header' => [
-                "農曆 {$month} 月（{$month}）",
-                "農曆 {$day} 日（{$day}）",
-                "{$lunar->getTimeZhi()}時（時辰序 {$timeIndex}）",
+                "農曆 {$month} 月",
+                "農曆 {$day} 日",
+                "{$lunar->getTimeZhi()}時（序 {$timeIndex}）",
             ],
         ];
     }
@@ -76,12 +91,17 @@ class XiaoLiuRen implements Command
         return File::json(base_path('data/xiaoLiuRen/palaces.json'));
     }
 
-    private function formatPalace(string $label, array $palace, string $header): string
+    private function formatPalace(string $label, string $role, string $note, array $palace, string $header): string
     {
         $aspects = $palace['aspects'];
+        $luckyNumbers = implode('、', $palace['lucky_numbers']);
 
-        $txt = "[{$label}] {$palace['name']}（{$palace['wuxing']}・{$palace['direction']}）\n";
+        $txt = "【{$role}】{$label} → {$palace['name']}\n";
+        $txt .= "（{$note}）\n";
         $txt .= "起算：{$header}\n";
+        $txt .= "─────────\n";
+        $txt .= "五行：{$palace['wuxing']}　方位：{$palace['direction']}　神煞：{$palace['spirit']}\n";
+        $txt .= "主數：{$luckyNumbers}\n";
         $txt .= "[卦辭]\n{$palace['summary']}\n";
         $txt .= "[事業] {$aspects['事業']}\n";
         $txt .= "[愛情] {$aspects['愛情']}\n";

@@ -113,13 +113,31 @@ class XiaoLiuRenTest extends TestCase
         }
     }
 
-    public function test_reply_command_messages_carry_palace_labels_in_order(): void
+    public function test_reply_command_orders_messages_with_time_palace_first_as_primary(): void
     {
         $messages = $this->command->replyCommand();
 
-        $this->assertStringContainsString('[月宮]', $messages[0]->getText());
-        $this->assertStringContainsString('[日宮]', $messages[1]->getText());
-        $this->assertStringContainsString('[時宮]', $messages[2]->getText());
+        $this->assertStringContainsString('時宮', $messages[0]->getText());
+        $this->assertStringContainsString('【主斷】', $messages[0]->getText());
+
+        $this->assertStringContainsString('日宮', $messages[1]->getText());
+        $this->assertStringContainsString('【雙宮並斷】', $messages[1]->getText());
+
+        $this->assertStringContainsString('月宮', $messages[2]->getText());
+        $this->assertStringContainsString('【整體背景】', $messages[2]->getText());
+    }
+
+    public function test_reply_command_includes_spirit_and_lucky_numbers_per_palace(): void
+    {
+        $messages = $this->command->replyCommand();
+
+        foreach ($messages as $msg) {
+            $text = $msg->getText();
+            $this->assertStringContainsString('神煞：', $text);
+            $this->assertStringContainsString('主數：', $text);
+            $this->assertStringContainsString('五行：', $text);
+            $this->assertStringContainsString('方位：', $text);
+        }
     }
 
     public function test_reply_command_includes_six_aspects_per_palace(): void

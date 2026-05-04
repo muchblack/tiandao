@@ -60,7 +60,7 @@ Registered defaults (in `CommandRegistry::registerDefaultCommands()`):
 - `ShengSheQian` — "抽神社籤" — Temple fortune stick
 - `Lottery` — "大樂透號碼" — Taiwan Big Lottery statistics
 - `MonteCarlo` — "蒙地卡羅預測" — Monte Carlo prediction
-- `XiaoLiuRen` — "小六壬" — 小六壬六宮占卜（依當下農曆月日時推大安/留連/速喜/赤口/小吉/空亡，回月/日/時三宮）
+- `XiaoLiuRen` — "小六壬" — 小六壬六宮占卜（依當下農曆月日時推大安/留連/速喜/赤口/小吉/空亡；以時宮主斷、日宮並讀、月宮為背景三段回覆）
 - `Error` — default fallback when no command matches (returned by registry, not registered)
 
 To add a new divination, implement `Command` in `app/KeyWords/` and register it in `CommandRegistry::registerDefaultCommands()`.
@@ -84,14 +84,21 @@ The QiGua class implements traditional yarrow stalk divination simulation:
 - Returns both original hexagram (本卦) and transformed hexagram (變卦) when applicable
 
 ### Xiao Liu Ren (小六壬) Algorithm
-The `XiaoLiuRen` class uses `6tail/lunar-php` to convert system time to lunar month/day + 時辰序 (0-based: 子=0...亥=11), then computes three palaces:
+The `XiaoLiuRen` class uses `6tail/lunar-php` to convert system time to lunar month/day + 時辰序 (0-based: 子=0...亥=11), then computes three palaces (equivalent to traditional inclusive-count rule "從 X 起順數 N 格"):
 - 月宮 = (abs(lunarMonth) - 1) % 6
 - 日宮 = (月宮 + lunarDay - 1) % 6
 - 時宮 = (日宮 + 時辰序) % 6
 
-Six palaces (cyclic order): **大安 → 留連 → 速喜 → 赤口 → 小吉 → 空亡**, defined in `data/xiaoLiuRen/palaces.json` with 事業/愛情/出行/失物/疾病/求財 aspects per palace. Replies as 3 separate `TextMessage` (one per palace).
+Six palaces (cyclic order): **大安 → 留連 → 速喜 → 赤口 → 小吉 → 空亡**, defined in `data/xiaoLiuRen/palaces.json` with 五行/方位/神煞/主數/卦辭 plus 事業/愛情/出行/失物/疾病/求財 aspects per palace.
 
-`cast()` is intentionally `public` to support deterministic unit testing with fixed `DateTime` fixtures — do not mark private without updating tests.
+**Reply convention** follows traditional 小六壬 reading order:
+1. **時宮（主斷）** — primary divination result; "the last cell counted" is the answer
+2. **日宮（雙宮並斷）** — read together with 時宮 to strengthen / refine the verdict
+3. **月宮（整體背景）** — overall monthly backdrop
+
+Replies as 3 separate `TextMessage`, **時宮 first** (not month-first). Order is encoded in `XiaoLiuRen::REPLY_ORDER` constant — change there to adjust framing.
+
+`cast()` is intentionally `public` to support deterministic unit testing with fixed `DateTime` fixtures; it returns indices in `[月, 日, 時]` order (cast order, not reply order). Do not mark private without updating tests.
 
 ### Lottery Analysis
 The Lottery class provides statistical analysis across multiple time periods:
