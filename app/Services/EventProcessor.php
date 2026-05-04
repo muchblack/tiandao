@@ -38,12 +38,14 @@ class EventProcessor
 
             return response('ok');
         } catch (\Exception $e) {
+            // LINE webhook 慣例為始終回 200，避免 LINE 平台重送導致風暴。
+            // 簽章驗證已由 LineBotWebHook middleware 把關（非法請求回 400）。
             Log::error('LINE webhook processing failed', [
                 'error' => $e->getMessage(),
                 'trace' => $e->getTraceAsString()
             ]);
-            
-            return response('Error processing webhook', 500);
+
+            return response('ok');
         }
     }
 
