@@ -29,7 +29,8 @@ class Error implements Command
         $helpText .= "• 起卦 - 易經占卜\n";
         $helpText .= "• 抽神社籤 - 神社籤詩\n";
         $helpText .= "• 大樂透號碼 - 彩票分析\n";
-        $helpText .= "• 蒙地卡羅預測 - 彩票預測";
+        $helpText .= "• 蒙地卡羅預測 - 彩票預測\n";
+        $helpText .= "• 小六壬 - 小六壬六宮占卜（月/日/時三宮）";
         
         return [(new TextMessage(['text' => $helpText]))->setType('text')];
     }
