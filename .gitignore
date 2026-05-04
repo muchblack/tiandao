@@ -19,5 +19,5 @@ yarn-error.log
 /.vscode
 /.ccb
 /logs
-/data
+/data/knowledge-graph.db*
 
