@@ -7,6 +7,7 @@ use App\KeyWords\Lottery;
 use App\KeyWords\MonteCarlo;
 use App\KeyWords\QiGua;
 use App\KeyWords\ShengSheQian;
+use App\KeyWords\XiaoLiuRen;
 use App\Services\CommandRegistry;
 use App\Services\CommandService;
 use App\Services\EventProcessor;
@@ -43,6 +44,7 @@ class EventProcessorTest extends TestCase
             '抽神社籤 → ShengSheQian' => ['抽神社籤', ShengSheQian::class],
             '大樂透號碼 → Lottery' => ['大樂透號碼', Lottery::class],
             '蒙地卡羅預測 → MonteCarlo' => ['蒙地卡羅預測', MonteCarlo::class],
+            '小六壬 → XiaoLiuRen' => ['小六壬', XiaoLiuRen::class],
         ];
     }
 
