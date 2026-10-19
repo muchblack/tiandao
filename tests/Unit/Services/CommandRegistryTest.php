@@ -41,6 +41,7 @@ class CommandRegistryTest extends TestCase
             '小六壬 → XiaoLiuRen' => ['小六壬', XiaoLiuRen::class],
             '起小六壬 → XiaoLiuRen' => ['起小六壬', XiaoLiuRen::class],
             '六壬 → XiaoLiuRen' => ['六壬', XiaoLiuRen::class],
+            '報數 → XiaoLiuRen' => ['小六壬 4 3 5', XiaoLiuRen::class],
             '每日塔羅 → Tarot' => ['每日塔羅', Tarot::class],
             '塔羅三牌陣 → Tarot' => ['塔羅三牌陣', Tarot::class],
         ];
@@ -64,6 +65,7 @@ class CommandRegistryTest extends TestCase
             '近似但不相等' => ['起 卦'],
             '英文' => ['hello'],
             '部分前綴' => ['大樂'],
+            '六壬神課' => ['六壬神課'],
         ];
     }
 

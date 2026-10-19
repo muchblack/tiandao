@@ -25,26 +25,57 @@ class XiaoLiuRen implements Command
 
     public function canHandle(string $message): bool
     {
-        return in_array($message, ['小六壬', '起小六壬', '六壬']);
+        return preg_match('/\A(?:起小六壬|小六壬|六壬)(?:\z|[ 　,，、])/u', $this->trimMessage($message)) === 1;
     }
 
     public function handle(MessageEvent $event): array
     {
-        return $this->replyCommand();
+        $text = $this->trimMessage($event->getMessage()->getText());
+        if (in_array($text, ['小六壬', '起小六壬', '六壬'], true)) {
+            return $this->replyCommand();
+        }
+
+        $input = preg_replace('/\A(?:起小六壬|小六壬|六壬)/u', '', $text);
+        $input = strtr($input, ['０' => '0', '１' => '1', '２' => '2', '３' => '3', '４' => '4', '５' => '5', '６' => '6', '７' => '7', '８' => '8', '９' => '9']);
+        $tokens = preg_split('/[ 　,，、]+/u', $input, -1, PREG_SPLIT_NO_EMPTY) ?: [];
+        $valid = count($tokens) === 3;
+        foreach ($tokens as $token) {
+            if (!ctype_digit($token) || (int) $token < 1 || (int) $token > 100) {
+                $valid = false;
+                break;
+            }
+        }
+        if (!$valid) {
+            return [(new TextMessage(['text' => '格式：小六壬 N1 N2 N3，每個數字須為 1–100 的整數。例如：小六壬 4 3 5']))->setType('text')];
+        }
+        $numbers = array_map('intval', $tokens);
+
+        return $this->buildReply([
+            'indices' => $this->castNumbers(...$numbers),
+            'header' => ["第一數 {$numbers[0]}", "第二數 {$numbers[1]}", "第三數 {$numbers[2]}"],
+        ], [
+            ['cast_pos' => 2, 'label' => '末宮', 'role' => '主斷', 'note' => '小六壬以末宮為主要占斷'],
+            ['cast_pos' => 1, 'label' => '中宮', 'role' => '雙宮並斷', 'note' => '中宮與末宮並讀以加強主斷'],
+            ['cast_pos' => 0, 'label' => '初宮', 'role' => '整體背景', 'note' => '本次報數起卦的整體背景'],
+        ]);
     }
 
     public function getDescription(): string
     {
-        return '小六壬占卜 - 依當下農曆月日時推算大安/留連/速喜/赤口/小吉/空亡六宮，依時宮主斷、日宮並讀、月宮為背景的傳統排法回覆';
+        return '小六壬占卜 - 依當下農曆月日時推算大安/留連/速喜/赤口/小吉/空亡六宮，依時宮主斷、日宮並讀、月宮為背景的傳統排法回覆；也可輸入「小六壬 N1 N2 N3」報數起卦，每數為 1–100';
     }
 
     public function replyCommand(): array
     {
+        return $this->buildReply($this->cast(new DateTime('now', new DateTimeZone(self::TIMEZONE))), self::REPLY_ORDER);
+    }
+
+    private function buildReply(array $cast, array $order): array
+    {
         $palaces = $this->loadPalaces();
-        $cast = $this->cast(new DateTime('now', new DateTimeZone(self::TIMEZONE)));
 
         $messages = [];
-        foreach (self::REPLY_ORDER as $entry) {
+        foreach ($order as $entry) {
             $pos = $entry['cast_pos'];
             $palace = $palaces[$cast['indices'][$pos]];
             $messages[] = (new TextMessage([
@@ -72,12 +103,8 @@ class XiaoLiuRen implements Command
         $day = $lunar->getDay();
         $timeIndex = $lunar->getTimeZhiIndex(); // 0-based: 子=0...亥=11
 
-        $monthPalace = ($month - 1) % 6;
-        $dayPalace = ($monthPalace + $day - 1) % 6;
-        $timePalace = ($dayPalace + $timeIndex) % 6;
-
         return [
-            'indices' => [$monthPalace, $dayPalace, $timePalace],
+            'indices' => $this->castNumbers($month, $day, $timeIndex + 1),
             'header' => [
                 "農曆 {$month} 月",
                 "農曆 {$day} 日",
@@ -86,9 +113,22 @@ class XiaoLiuRen implements Command
         ];
     }
 
+    private function castNumbers(int $first, int $second, int $third): array
+    {
+        $initial = ($first - 1) % 6;
+        $middle = ($initial + $second - 1) % 6;
+
+        return [$initial, $middle, ($middle + $third - 1) % 6];
+    }
+
     private function loadPalaces(): array
     {
         return File::json(base_path('data/xiaoLiuRen/palaces.json'));
+    }
+
+    private function trimMessage(string $message): string
+    {
+        return preg_replace('/\A[\x09-\x0D 　]+|[\x09-\x0D 　]+\z/u', '', $message) ?? '';
     }
 
     private function formatPalace(string $label, string $role, string $note, array $palace, string $header): string
