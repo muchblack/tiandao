@@ -60,7 +60,7 @@ Registered defaults (in `CommandRegistry::registerDefaultCommands()`):
 - `ShengSheQian` — "抽神社籤" — Temple fortune stick
 - `Lottery` — "大樂透號碼" — Taiwan Big Lottery statistics
 - `MonteCarlo` — "蒙地卡羅預測" — Monte Carlo prediction
-- `XiaoLiuRen` — "小六壬" — 小六壬六宮占卜（依當下農曆月日時推大安/留連/速喜/赤口/小吉/空亡；以時宮主斷、日宮並讀、月宮為背景三段回覆）
+- `XiaoLiuRen` — "小六壬" — 小六壬六宮占卜（單獨關鍵字依農曆月日時起卦；`小六壬 N1 N2 N3` 依三個 1–100 整數報數起卦）
 - `Tarot` — "每日塔羅" / "塔羅三牌陣" — RWS 塔羅占卜，每日一張回 ImageMessage+TextMessage，三牌陣回 FlexCarousel+TextMessage
 - `Error` — default fallback when no command matches (returned by registry, not registered)
 
@@ -85,21 +85,18 @@ The QiGua class implements traditional yarrow stalk divination simulation:
 - Returns both original hexagram (本卦) and transformed hexagram (變卦) when applicable
 
 ### Xiao Liu Ren (小六壬) Algorithm
-The `XiaoLiuRen` class uses `6tail/lunar-php` to convert system time to lunar month/day + 時辰序 (0-based: 子=0...亥=11), then computes three palaces (equivalent to traditional inclusive-count rule "從 X 起順數 N 格"):
-- 月宮 = (abs(lunarMonth) - 1) % 6
-- 日宮 = (月宮 + lunarDay - 1) % 6
-- 時宮 = (日宮 + 時辰序) % 6
+`XiaoLiuRen` 支援 `小六壬`、`起小六壬`、`六壬` 三種前綴；比對前去除頭尾 ASCII 空白與全形空格。關鍵字後須有分隔符才辨識為報數模式，`六壬神課`、`小六壬435` 不匹配。
 
-Six palaces (cyclic order): **大安 → 留連 → 速喜 → 赤口 → 小吉 → 空亡**, defined in `data/xiaoLiuRen/palaces.json` with 五行/方位/神煞/主數/卦辭 plus 事業/愛情/出行/失物/疾病/求財 aspects per palace.
+兩種模式共用私有 `castNumbers()`，六宮索引依序為 **大安 → 留連 → 速喜 → 赤口 → 小吉 → 空亡**（0–5）：
+- 初宮 = `(N1 - 1) % 6`
+- 中宮 = `(初宮 + N2 - 1) % 6`
+- 末宮 = `(中宮 + N3 - 1) % 6`
 
-**Reply convention** follows traditional 小六壬 reading order:
-1. **時宮（主斷）** — primary divination result; "the last cell counted" is the answer
-2. **日宮（雙宮並斷）** — read together with 時宮 to strengthen / refine the verdict
-3. **月宮（整體背景）** — overall monthly backdrop
+單獨輸入關鍵字時，使用 `6tail/lunar-php` 取得當下農曆資訊，以 `abs(農曆月)`、農曆日、`時辰序 + 1` 作為三數（時辰序為子=0…亥=11）。時間模式維持三則 `TextMessage`：時宮（主斷）、日宮（雙宮並斷）、月宮（整體背景），順序定義於 `REPLY_ORDER`，起算文字維持農曆月、農曆日、時辰與原本的 0-based 序號。
 
-Replies as 3 separate `TextMessage`, **時宮 first** (not month-first). Order is encoded in `XiaoLiuRen::REPLY_ORDER` constant — change there to adjust framing.
+報數用法為 `小六壬 N1 N2 N3`，例如 `小六壬 4 3 5`。必須恰好三個純數字字串，每數為 1–100；允許前置零、全形數字。分隔符為半形空格、全形空格、`,`、`，`、`、`，可混用及連續使用；換行與 Tab 不算分隔符。無效輸入只回覆一則用法提示。報數結果不依賴時間，依序回覆末宮（主斷）、中宮（雙宮並斷）、初宮（整體背景），起算文字分別是第三數、第二數、第一數。
 
-`cast()` is intentionally `public` to support deterministic unit testing with fixed `DateTime` fixtures; it returns indices in `[月, 日, 時]` order (cast order, not reply order). Do not mark private without updating tests.
+兩模式都沿用 `data/xiaoLiuRen/palaces.json`，每宮包含五行／方位／神煞／主數／卦辭及事業／愛情／出行／失物／疾病／求財六面向。`cast(DateTime)` 保持公開，回傳 `indices` 為 `[月, 日, 時]` 順序及三個 `header`；`replyCommand()` 保持時間模式，供舊呼叫端使用。
 
 ### Tarot
 The `Tarot` class provides two divination flows backed by `data/tarot/cards.json` (78 cards × upright/reversed):
