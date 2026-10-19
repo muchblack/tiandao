@@ -12,6 +12,9 @@ use LINE\Webhook\Model\MessageEvent;
 class XiaoLiuRen implements Command
 {
     private const TIMEZONE = 'Asia/Taipei';
+    private const KEYWORD_PATTERN = '(?:起小六壬|小六壬|六壬)';
+    private const SEPARATOR_PATTERN = '[ 　,，、]';
+    private const USAGE_HELP = '格式：小六壬 N1 N2 N3，每個數字須為 1–100 的整數。例如：小六壬 4 3 5';
 
     /**
      * 訊息回覆順序（傳統「以時宮為主，日宮+時宮雙宮並斷」之排法）。
@@ -23,41 +26,33 @@ class XiaoLiuRen implements Command
         ['cast_pos' => 0, 'label' => '月宮', 'role' => '整體背景', 'note' => '本月整體運勢背景'],
     ];
 
+    private const NUMBER_REPLY_ORDER = [
+        ['cast_pos' => 2, 'label' => '末宮', 'role' => '主斷', 'note' => '小六壬以末宮為主要占斷'],
+        ['cast_pos' => 1, 'label' => '中宮', 'role' => '雙宮並斷', 'note' => '中宮與末宮並讀以加強主斷'],
+        ['cast_pos' => 0, 'label' => '初宮', 'role' => '整體背景', 'note' => '本次報數起卦的整體背景'],
+    ];
+
     public function canHandle(string $message): bool
     {
-        return preg_match('/\A(?:起小六壬|小六壬|六壬)(?:\z|[ 　,，、])/u', $this->trimMessage($message)) === 1;
+        return preg_match('/\A'.self::KEYWORD_PATTERN.'(?:\z|'.self::SEPARATOR_PATTERN.')/u', $this->trimMessage($message)) === 1;
     }
 
     public function handle(MessageEvent $event): array
     {
         $text = $this->trimMessage($event->getMessage()->getText());
-        if (in_array($text, ['小六壬', '起小六壬', '六壬'], true)) {
+        if (preg_match('/\A'.self::KEYWORD_PATTERN.'\z/u', $text) === 1) {
             return $this->replyCommand();
         }
 
-        $input = preg_replace('/\A(?:起小六壬|小六壬|六壬)/u', '', $text);
-        $input = strtr($input, ['０' => '0', '１' => '1', '２' => '2', '３' => '3', '４' => '4', '５' => '5', '６' => '6', '７' => '7', '８' => '8', '９' => '9']);
-        $tokens = preg_split('/[ 　,，、]+/u', $input, -1, PREG_SPLIT_NO_EMPTY) ?: [];
-        $valid = count($tokens) === 3;
-        foreach ($tokens as $token) {
-            if (!ctype_digit($token) || (int) $token < 1 || (int) $token > 100) {
-                $valid = false;
-                break;
-            }
+        $numbers = $this->parseNumbers($text);
+        if ($numbers === null) {
+            return [(new TextMessage(['text' => self::USAGE_HELP]))->setType('text')];
         }
-        if (!$valid) {
-            return [(new TextMessage(['text' => '格式：小六壬 N1 N2 N3，每個數字須為 1–100 的整數。例如：小六壬 4 3 5']))->setType('text')];
-        }
-        $numbers = array_map('intval', $tokens);
 
         return $this->buildReply([
             'indices' => $this->castNumbers(...$numbers),
             'header' => ["第一數 {$numbers[0]}", "第二數 {$numbers[1]}", "第三數 {$numbers[2]}"],
-        ], [
-            ['cast_pos' => 2, 'label' => '末宮', 'role' => '主斷', 'note' => '小六壬以末宮為主要占斷'],
-            ['cast_pos' => 1, 'label' => '中宮', 'role' => '雙宮並斷', 'note' => '中宮與末宮並讀以加強主斷'],
-            ['cast_pos' => 0, 'label' => '初宮', 'role' => '整體背景', 'note' => '本次報數起卦的整體背景'],
-        ]);
+        ], self::NUMBER_REPLY_ORDER);
     }
 
     public function getDescription(): string
@@ -68,6 +63,23 @@ class XiaoLiuRen implements Command
     public function replyCommand(): array
     {
         return $this->buildReply($this->cast(new DateTime('now', new DateTimeZone(self::TIMEZONE))), self::REPLY_ORDER);
+    }
+
+    private function parseNumbers(string $text): ?array
+    {
+        $input = preg_replace('/\A'.self::KEYWORD_PATTERN.'/u', '', $text);
+        $input = strtr($input, ['０' => '0', '１' => '1', '２' => '2', '３' => '3', '４' => '4', '５' => '5', '６' => '6', '７' => '7', '８' => '8', '９' => '9']);
+        $tokens = preg_split('/'.self::SEPARATOR_PATTERN.'+/u', $input, -1, PREG_SPLIT_NO_EMPTY) ?: [];
+        if (count($tokens) !== 3) {
+            return null;
+        }
+        foreach ($tokens as $token) {
+            if (!ctype_digit($token) || (int) $token < 1 || (int) $token > 100) {
+                return null;
+            }
+        }
+
+        return array_map('intval', $tokens);
     }
 
     private function buildReply(array $cast, array $order): array
